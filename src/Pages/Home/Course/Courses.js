@@ -9,8 +9,8 @@ const Courses = () => {
         <div>
            <div>
            <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-screen">
-    <img src={courses_poster} className="w-full" alt='' />
+  <div id="slide1" className="carousel-item relative w-screen  ">
+    <img src={courses_poster} className="w-full mx-8 mt-2 container" alt='' />
   </div> 
   </div>
            </div>

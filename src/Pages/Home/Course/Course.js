@@ -9,9 +9,8 @@ const Course = () => {
   <div className="hero-content flex-col lg:flex-row">
     <img src={course_poster} className="max-w-sm rounded-lg shadow-2xl" alt='' />
     <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <Link to="/courses"><button className="btn btn-primary">See our courses </button></Link>
+      <h1 className="text-5xl font-bold">Join Our Course and Improve your skills with us</h1>
+      <Link to="/courses"><button className="btn btn-primary mt-8 mx-48 ">See our courses </button></Link>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ShowCourse = ({course}) => {
     return (
         <div>
@@ -10,7 +11,7 @@ const ShowCourse = ({course}) => {
             <h2 className="card-title">{course.name}</h2>
             <p>Price: ${course.price}</p>
             <div className="card-actions justify-end">
-                <button className="btn btn-primary">Add to Cart</button>
+                <button className="text-white text-xl btn btn-primary  hover:bg-[#293661] duration-500 rounded-lg px-8 py-3.5 flex items-center'">Add to Cart</button>
             </div>
         </div>
     </div>
