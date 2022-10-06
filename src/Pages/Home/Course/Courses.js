@@ -4,7 +4,7 @@ import CourseData from './CourseData';
 import ShowCourse from './ShowCourse';
 
 const Courses = () => {
-    const [courses,setCourses] = useState(CourseData)
+    const [courses] = useState(CourseData)
     return (
         <div>
            <div>
