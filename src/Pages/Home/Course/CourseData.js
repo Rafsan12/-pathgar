@@ -1,47 +1,58 @@
-const Courses = [
+import app_developer from "../../../Course_image/1720.jpg"
+import shopify  from "../../../Course_image/Shopify Theme Developer.png"
+import marketing   from "../../../Course_image/Digital-marketing.png"
+import english  from "../../../Course_image/english.png"
+import craft  from "../../../Course_image/craft.png"
+import art  from "../../../Course_image/art.png"
+import barista  from "../../../Course_image/Barista Course Poster.png"
+
+
+
+
+const CourseData = [
     {
-        bid: 1,
-        image: programming_1,
+        _id: 1,
+        image: app_developer,
         price: 300,
-        name: 'Computer Programming'
+        name: 'App Developer'
     },
     {
-        bid: 2,
-        image: programming_2,
+        _id: 2,
+        image: shopify,
         price: 450,
-        name: 'Java'
+        name: 'Shopify'
     },
     {
-        bid: 3,
-        image: programming_3,
+        _id: 3,
+        image: marketing ,
         price: 340,
-        name: 'Discrete Mathematics'
+        name: 'Digital Marketing'
     },
     {
-        bid: 4,
-        image: programming_7,
+        _id: 4,
+        image: english,
         price: 300,
-        name: 'Algorithms'
+        name: 'English'
     },
     {
-        bid: 5,
-        image: story_1,
+        _id: 5,
+        image: craft,
         price: 300,
-        name: 'Aj ami kothao jabona'
+        name: 'Craft'
     },
     {
-        bid: 6,
-        image: story_2,
+        _id: 6,
+        image: art,
         price: 300,
-        name: 'Computer Programming'
+        name: 'Art and Painting'
     },
     {
-        bid: 7,
-        image: story_3,
+        _id: 7,
+        image:barista,
         price: 300,
-        name: 'Computer Programming'
+        name: 'Barista'
     },
   
 ]
 
-export default Courses
+export default CourseData;
