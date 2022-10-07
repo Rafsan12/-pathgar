@@ -72,7 +72,7 @@ const BookList = () => {
                                 </div>
                             )
                         }
-                    </div> : " nnnnn"
+                    </div> : ""
             }
 
         </div>
