@@ -25,13 +25,6 @@
 
     .banner__text{
         max-width:576px;}
-        span {
-          font-size: 14px;
-          font-weight: 700;
-          color:white;
-          display: block;
-          text-transform: uppercase;
-        }
         h3 {
           font-size: 50px;
           font-weight: 800;

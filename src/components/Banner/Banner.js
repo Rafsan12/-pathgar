@@ -46,23 +46,16 @@ const Banner = () => {
         style={{ "--swiper-theme-color": "#27AE61" }}
       >
         {data.map((bnrData) => (
-          <SwiperSlide>
-          <div class="banner_single" 
+          <SwiperSlide >
+          <div className="banner_single" 
             style={{
             backgroundImage: `url(${bnrData.image})`,
             backgroundSize: "content",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat", }}>
-              <div class="container mx-auto">
-                <div class="grid">
-                  <div class="banner__text">
-                    <span
-                      data-aos="fade-left"
-                      data-aos-delay="100"
-                      data-aos-duration="500"
-                    >
-                      {bnrData.subtitle}
-                    </span>
+              <div className="container mx-auto">
+                <div>
+                  <div className="banner__text">
                     <h3
                       data-aos="fade-left"
                       data-aos-delay="150"
