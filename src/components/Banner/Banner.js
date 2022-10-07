@@ -21,7 +21,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const data = [
   {
     image: img1,
-    title: "Upto 10% off on Book product",
+    title: "Upto 10% off on our course",
   },
   {
     image: img2,
