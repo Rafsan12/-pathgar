@@ -1,4 +1,3 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Courses from './Pages/Home/Course/Courses';
 
@@ -11,8 +10,7 @@ function App() {
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/courses" element={<Courses></Courses>}></Route>
     </Routes>
-    </div>
-  );
+</div>
+  )
 }
-
 export default App;
