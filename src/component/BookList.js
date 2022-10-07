@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Books from './Books';
 import ShowBooks from './ShowBooks';
 
@@ -7,6 +8,11 @@ const BookList = () => {
     const [books, setBook] = useState(Books);
     const [categoryBooks, setCategoryBooks] = useState([]);
 
+    const navigate = useNavigate();
+
+    const handleAllBooks = () => {
+        navigate('/allbooks');
+    }
     const handleProgrammingBook = () => {
         setCategoryBooks(books.filter(book => book.category === 'programming'));
     }
@@ -23,9 +29,9 @@ const BookList = () => {
         <div>
             <div className='bg-orange-100 py-3 mb-5'>
                 <h1 className='font-bold text-center text-5xl p-2 my-5'>BookList</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10 my-5'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 mx-10 my-5'>
                     {
-                        books.map(book =>
+                        books.slice(0, 4).map(book =>
                             <div key={book.bid} className="card w-full shadow-xl bg-base-100 rounded">
                                 <ShowBooks
                                     book={book}
@@ -33,6 +39,9 @@ const BookList = () => {
                             </div>
                         )
                     }
+                </div>
+                <div className='flex justify-center'>
+                    <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg left-1/2" onClick={handleAllBooks}>See More</button>
                 </div>
             </div>
             <h1 className='font-bold text-center text-4xl p-2 mt-24 mb-8'>Category of Books</h1>
@@ -62,7 +71,7 @@ const BookList = () => {
 
             {
                 categoryBooks.length ?
-                    <div className='grid grid-cols-4 gap-5 w-full mx-auto px-6 py-3'>
+                    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-full mx-auto px-6 py-3'>
                         {
                             categoryBooks.map(book =>
                                 <div key={book.bid} className="card w-full shadow-xl bg-green-100 rounded">
