@@ -1,0 +1,8 @@
+.draw {
+    height: 100vh;
+    background: rgb(250, 208, 194);
+ }
+ canvas { 
+    background: #ffffff; 
+ }
+

@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper"; 
 
 
 
@@ -80,6 +80,7 @@ const Banner = () => {
           
         ))}
       </Swiper>
+      
     </div>
   );
 };
