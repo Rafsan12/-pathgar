@@ -1,10 +1,16 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import BookList from './component/BookList';
+import Courses from './Pages/Home/Course/Courses';
+
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
     <div>
-      <BookList></BookList>
+    <Routes>
+      <Route path="/" element={<Home></Home>}></Route>
+      <Route path="/courses" element={<Courses></Courses>}></Route>
+    </Routes>
     </div>
   );
 }
