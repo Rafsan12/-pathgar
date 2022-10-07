@@ -1,14 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Banner from './components/Banner/Banner';
 import Navbar from './components/Navbar/Navbar';
+import Home from './Pages/Home/Home';
+import Footer from './Footer';
+import Courses from './Pages/Home/Course/Courses';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Banner></Banner>
-    </div>
-  );
+    <div>
+       <Navbar></Navbar>
+    <Routes>
+      <Route path="/" element={<Home></Home>}></Route>
+      <Route path="/courses" element={<Courses></Courses>}></Route>
+    </Routes>
+    <Footer />
+</div>
+  )
 }
-
 export default App;
