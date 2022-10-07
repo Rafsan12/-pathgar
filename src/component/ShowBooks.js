@@ -11,7 +11,7 @@ const ShowBooks = ({ book }) => {
                 <h2 className="card-title">{book.name}</h2>
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">Add to cart</button>
                 </div>
             </div>
         </div>
