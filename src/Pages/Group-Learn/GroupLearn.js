@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './GroupLearn.css'
 
 const GroupLearn = () => {
@@ -9,7 +10,7 @@ const GroupLearn = () => {
                 <div className="max-w-md">
                     <h1 className="hello mb-5 font-bold ">Hello Dear</h1>
                     <p className="learn mb-5 font-bold ">If you want to learn in a group with your friends, Then clink the Let's Learn button.</p>
-                    <button className="btn btn-primary font-bold">Let's Learn</button>
+                    <Link to="/dashboard" className="btn btn-primary font-bold">Let's Learn</Link>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ import BookList from './component/BookList';
 import AllBook from './component/AllBook';
 import Drawing from './Pages/Draw/Drawing'; 
 import GroupLearn from './Pages/Group-Learn/GroupLearn';
+import DashBoard from './Pages/Group-Learn/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/book' element={<BookList></BookList>}></Route>
         <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
         <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
+        <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
       </Routes>
       <Footer />
