@@ -9,7 +9,7 @@ const GroupLearn = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="hello mb-5 font-bold ">Hello Dear</h1>
-                    <p className="learn mb-5 font-bold ">If you want to learn in a group with your friends, Then clink the Let's Learn button.</p>
+                    <p className="learn mb-5 font-bold ">If you want to learn in a team with your friends, Then clink the "Let's Learn" button.</p>
                     <Link to="/dashboard" className="btn btn-primary font-bold">Let's Learn</Link>
                 </div>
             </div>

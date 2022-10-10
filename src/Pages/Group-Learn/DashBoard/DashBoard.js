@@ -13,20 +13,20 @@ const DashBoard = () => {
                         <a href='/#' className="card cards p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
-                                    <span className="text-7xl"><HiVideoCamera className='icon pl-10'></HiVideoCamera></span>
+                                    <span className="text-7xl"><MdMessage className='icon pl-10'></MdMessage></span>
                                 </div>
                                 <div>
-                                    <h4 className='mt-10 text-xl font-bold'>Join Meeting</h4>
+                                    <h4 className='mt-10 text-xl font-bold'>Message Box</h4>
                                 </div>
                             </div> 
                         </a>
                         <a href='/#' className="card cards p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
-                                    <span className="text-7xl"><MdMessage className='icon pl-10'></MdMessage></span>
+                                    <span className="text-7xl"><HiVideoCamera className='icon pl-10'></HiVideoCamera></span>
                                 </div>
                                 <div>
-                                    <h4 className='mt-10 text-xl font-bold'>Message Box</h4>
+                                    <h4 className='mt-10 text-xl font-bold'>Join Meeting</h4>
                                 </div>
                             </div> 
                         </a>
