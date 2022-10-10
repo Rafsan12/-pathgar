@@ -2,6 +2,7 @@ import React from 'react';
 import './DashBoard.css';
 import { HiVideoCamera } from 'react-icons/hi';
 import { MdMessage } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 
 const DashBoard = () => {
@@ -10,7 +11,7 @@ const DashBoard = () => {
             <div className="flex justify-center items-center h-screen">
                 <div className="card p-20  bg-base-100 shadow-xl">
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20'>
-                        <a href='/#' className="card cards p-10 w-80 shadow-xl">
+                        <Link to='/messagebox' className="card cards p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
                                     <span className="text-7xl"><MdMessage className='icon pl-10'></MdMessage></span>
@@ -19,17 +20,18 @@ const DashBoard = () => {
                                     <h4 className='mt-10 text-xl font-bold'>Message Box</h4>
                                 </div>
                             </div> 
-                        </a>
-                        <a href='/#' className="card cards p-10 w-80 shadow-xl">
+                        </Link>
+                        <Link to='/meeting' className="card cards p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
                                     <span className="text-7xl"><HiVideoCamera className='icon pl-10'></HiVideoCamera></span>
                                 </div>
                                 <div>
-                                    <h4 className='mt-10 text-xl font-bold'>Join Meeting</h4>
+                                    <h4 className='mt-10 text-xl font-bold'>New Meeting</h4>
+                                    <span className='font-bold text-gray-500'>set up new meeting</span>
                                 </div>
                             </div> 
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

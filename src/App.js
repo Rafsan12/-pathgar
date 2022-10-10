@@ -9,6 +9,8 @@ import AllBook from './component/AllBook';
 import Drawing from './Pages/Draw/Drawing'; 
 import GroupLearn from './Pages/Group-Learn/GroupLearn';
 import DashBoard from './Pages/Group-Learn/DashBoard/DashBoard';
+import MessageBox from './Pages/Group-Learn/DashBoard/MessageBox/MessageBox';
+import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
         <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
         <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+        <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
+        <Route path='/meeting' element={<Meeting></Meeting>}></Route>
+
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
       </Routes>
       <Footer />
