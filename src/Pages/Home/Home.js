@@ -7,6 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <h1 className='text-center'>hi</h1>
             <Course></Course>
             <BookList></BookList>
         </div>
