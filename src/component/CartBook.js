@@ -42,7 +42,7 @@ const CartBook = () => {
         <div className='px-3 my-10'>
             <p className='text-3xl text-center font-bold my-10'>Your Book items: {carts.length}</p>
 
-            <section className='flex flex-col lg:flex-row gap-5'>
+            <section className='flex flex-col lg:flex-row gap-5 '>
                 <div className='flex flex-col gap-5 lg:w-1/2'>
                     {
                         carts.map(cart => <div key={cart.bid}>
@@ -77,13 +77,15 @@ const CartBook = () => {
                     }
                 </div>
 
-                <div className='lg:w-1/2'>
-                    <div className="card lg:w-3/5 w-full mx-auto">
-                        <div className="card-body p-2">
-                            <p>Total:</p>
-                            <h2 className="text-3xl font-bold">{price}$</h2>
-                            <button className="btn btn-info  w-3/4 text-white ">Checkout</button>
+                <div className='lg:w-1/2 '>
+                    <div class="container sticky top-0 z-50">
+                        <div className="card lg:w-3/5 w-full mx-auto ">
+                            <div className="card-body p-2">
+                                <p>Total:</p>
+                                <h2 className="text-3xl font-bold">{price}$</h2>
+                                <button className="btn btn-info  w-3/4 text-white ">Checkout</button>
 
+                            </div>
                         </div>
                     </div>
                 </div>
