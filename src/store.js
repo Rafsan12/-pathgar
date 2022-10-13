@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import CourseReducer from './Pages/Home/Course/';
+import CourseReducer from './Pages/Redux/CourseSlice';
 
 
 const store = configureStore({
