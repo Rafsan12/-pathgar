@@ -7,6 +7,7 @@ import Courses from './Pages/Home/Course/Courses';
 import BookList from './component/BookList';
 import AllBook from './component/AllBook';
 import Drawing from './Pages/Draw/Drawing';
+import CartBook from './component/CartBook';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/courses" element={<Courses></Courses>}></Route>
         <Route path='/book' element={<BookList></BookList>}></Route>
-        <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
+        <Route path='/all-books' element={<AllBook></AllBook>}></Route>
+        <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
       </Routes>
       <Footer />
