@@ -11,7 +11,7 @@ const BookList = () => {
     const navigate = useNavigate();
 
     const handleAllBooks = () => {
-        navigate('/allbooks');
+        navigate('/all-books');
     }
     const handleProgrammingBook = () => {
         setCategoryBooks(books.filter(book => book.category === 'programming'));
