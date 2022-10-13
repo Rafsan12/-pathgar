@@ -8,7 +8,7 @@ import Footer from './Footer';
 import BookList from './component/BookList';
 import AllBook from './component/AllBook';
 import Drawing from './Pages/Draw/Drawing';
-import CartBook from './component/CartBook';
+import CartBook from './component/CartBook'
 
 function App() {
   return (
