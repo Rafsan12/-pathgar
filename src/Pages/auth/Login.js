@@ -2,7 +2,7 @@ import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import auth from '../../firebase-init';
+import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const Login = () => {
     const [
@@ -68,9 +68,9 @@ const Login = () => {
                                 <button onClick={() => signInWithGoogle()}  class="btn btn-outline p-3">
                                     <i className="fa-brands fa-google mr-2 font-bold text-sky-500"></i>
                                     Login With Google</button>
-                                <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
+                                {/* <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
                                     <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
-                                    Login With Facebook</button>     
+                                    Login With Facebook</button>      */}
                             
                             </div>
                             {signError}
