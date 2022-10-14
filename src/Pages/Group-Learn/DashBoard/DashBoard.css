@@ -1,0 +1,20 @@
+.board { 
+    background: rgb(156, 148, 138);
+}
+
+.cards {
+    background: #BBF7D0;
+    transition: .3s linear;
+}
+
+.cards:hover {
+    background: #92f4b4;
+    transform: scale(1.1);    
+}
+
+.icon {
+    /* display: inline-block; */
+    background-color: #00000017; 
+    border-radius: 10px;
+    padding: 10px;
+}
