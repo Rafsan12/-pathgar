@@ -7,7 +7,11 @@ import Home from './Pages/Home/Home';
 import Footer from './Footer';
 import BookList from './component/BookList';
 import AllBook from './component/AllBook';
-import Drawing from './Pages/Draw/Drawing';
+import Drawing from './Pages/Draw/Drawing'; 
+import GroupLearn from './Pages/Group-Learn/GroupLearn';
+import DashBoard from './Pages/Group-Learn/DashBoard/DashBoard';
+import MessageBox from './Pages/Group-Learn/DashBoard/MessageBox/MessageBox';
+import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
@@ -21,6 +25,11 @@ function App() {
         <Route path="/courses" element={<Courses></Courses>}></Route>
         <Route path="/cart" element={<Cart></Cart>}></Route>
         <Route path='/book' element={<BookList></BookList>}></Route>
+        <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
+        <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
+        <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+        <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
+        <Route path='/meeting' element={<Meeting></Meeting>}></Route>
         <Route path='/all-books' element={<AllBook></AllBook>}></Route>
         <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>

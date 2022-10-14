@@ -1,0 +1,49 @@
+.hero {
+    height: 90vh;
+}
+
+.hero {
+    font-size: 60px;
+}
+.learn {
+    font-size: 30px;
+}
+ 
+@media all and (max-width: 992px) {
+    .hero {
+        height: 80vh;
+    }
+    
+    .hero {
+        font-size: 60px;
+    }
+    .learn {
+        font-size: 30px;
+    }
+     
+}
+
+
+@media all and (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero {
+        font-size: 30px;
+    }
+    .learn {
+        font-size: 20px;
+    }
+    
+}
+
+@media all and (max-width: 620px) {
+    .hero {
+        height: 40vh;
+    }
+     .learn {
+        font-size: 20px;
+        padding: 0 30px;
+    }
+}

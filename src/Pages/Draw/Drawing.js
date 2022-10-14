@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import './Drawing.css'
-
+import './Drawing.css' 
 const colors = [
     "red",
     "green",
@@ -37,7 +36,7 @@ const Drawing = () => {
             ctx.current.strokeStyle = selectedColor;
             ctx.current.lineWidth = selectedSize;
             ctx.current.lineJoin = 'round';
-            ctx.current.moveTo(lastPosition.x, lastPosition.y);
+            ctx.current.moveTo(lastPosition.x, lastPosition.y); 
             ctx.current.lineTo(x, y);
             ctx.current.closePath();
             ctx.current.stroke();
@@ -82,19 +81,16 @@ const Drawing = () => {
     // Mouse Move
     const onMouseMove = (e) => {
         draw(e.pageX, e.pageY)
-    }
+    } 
 
 
-
-    return (
-
-
-
+    return ( 
         <div className='draw'>
 
             <canvas
                 style={{
                     border: "1px solid #000",
+                    background: "#ffffff", 
                 }}
                 width={1000}
                 height={500}
