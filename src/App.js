@@ -8,6 +8,8 @@ import Footer from './Footer';
 import BookList from './component/BookList';
 import AllBook from './component/AllBook';
 import Drawing from './Pages/Draw/Drawing';
+import Login from './Pages/auth/Login';
+import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
 
 function App() {
@@ -22,8 +24,13 @@ function App() {
         <Route path='/all-books' element={<AllBook></AllBook>}></Route>
         <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
-      <Footer />
+      <Footer></Footer>
+      
+       
+     
     </div>
   )
 }
