@@ -7,24 +7,24 @@ import { Link } from 'react-router-dom';
 
 const DashBoard = () => {
     return (
-        <div className='board'>
+        <div className='boards'>
             <div className="flex justify-center items-center h-screen">
                 <div className="card p-20  bg-base-100 shadow-xl">
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20'>
-                        <Link to='/messagebox' className="card cards p-10 w-80 shadow-xl">
+                        <Link to='/messagebox' className="card cardss p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
-                                    <span className="text-7xl"><MdMessage className='icon pl-10'></MdMessage></span>
+                                    <span className="text-7xl"><MdMessage className='icons pl-10'></MdMessage></span>
                                 </div>
                                 <div>
                                     <h4 className='mt-10 text-xl font-bold'>Message Box</h4>
                                 </div>
                             </div> 
                         </Link>
-                        <Link to='/meeting' className="card cards p-10 w-80 shadow-xl">
+                        <Link to='/meeting' className="card cardss p-10 w-80 shadow-xl">
                             <div className=''>
                                 <div>
-                                    <span className="text-7xl"><HiVideoCamera className='icon pl-10'></HiVideoCamera></span>
+                                    <span className="text-7xl"><HiVideoCamera className='icons pl-10'></HiVideoCamera></span>
                                 </div>
                                 <div>
                                     <h4 className='mt-10 text-xl font-bold'>New Meeting</h4>
