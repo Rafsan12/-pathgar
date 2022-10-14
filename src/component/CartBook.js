@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AddItem, DecreaseOne, deleteItem } from '../Redux/Reducer/BookSlice';
+import { AddItem, DecreaseOne, deleteItem } from '../redux/Reducer/BookSlice';
 
 const CartBook = () => {
 
