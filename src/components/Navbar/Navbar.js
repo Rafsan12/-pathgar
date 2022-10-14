@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from "../../Course_image/Fearless.gif"
 
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
               {menuItems}
             </ul>
           </div>
-          <p className='text-4xl text'>PATHAGAR</p>
+          <img className='w-20' src={logo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex  text-white">
           <ul className="menu menu-horizontal p-0">
