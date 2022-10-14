@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { AddItem } from '../Redux/Reducer/BookSlice';
+import { AddItem } from '../redux/Reducer/BookSlice';
 
 const ShowBooks = ({ book }) => {
     //console.log(book);
