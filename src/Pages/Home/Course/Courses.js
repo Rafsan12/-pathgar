@@ -15,7 +15,7 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
-            <GroupLearn></GroupLearn>
+          
             <div>
                 <h1 className='text-5xl mt-20 mb-10 font-bold text-cyan-400 text-center'> Our Online Courses</h1>
             </div>
@@ -30,6 +30,9 @@ const Courses = () => {
                     )
                 }
             </div>
+           <div className="pb-8">
+           <GroupLearn></GroupLearn>
+           </div>
         </div>
     );
 };

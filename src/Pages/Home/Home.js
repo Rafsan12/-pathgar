@@ -11,7 +11,6 @@ const Home = () => {
             <Banner></Banner>
             <Course></Course>
             <BookList></BookList>
-           
             <To_Drawing></To_Drawing>
         </div>
     );
