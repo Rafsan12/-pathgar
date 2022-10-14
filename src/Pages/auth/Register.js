@@ -26,13 +26,13 @@ let errorMsg;
         navigate("/login");
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen ">
             
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
             <div className="card-body">
                     {loadingCom}
                 <div className="form-control">
-                        
+                <h2 className='text-center text-3xl'>PLease Register</h2>
             <label className="label">
                 <span className="label-text">Email</span>
             </label>
