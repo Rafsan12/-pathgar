@@ -1,7 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { AddItem } from '../Redux/Reducer/BookSlice';
 
 const ShowBooks = ({ book }) => {
     //console.log(book);
+    const dispatch = useDispatch();
+
+
+    const AddToCart = (book) => {
+        dispatch(AddItem(book));
+
+    }
+
+
+
     return (
         <div>
             <figure className='pt-5'>
@@ -11,7 +23,7 @@ const ShowBooks = ({ book }) => {
                 <h2 className="card-title">{book.name}</h2>
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Add to cart</button>
+                    <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>
                 </div>
             </div>
         </div>

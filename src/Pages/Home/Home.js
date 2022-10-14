@@ -12,6 +12,7 @@ const Home = () => {
             <Course></Course>
             <BookList></BookList>
             <To_Drawing></To_Drawing>
+     
         </div>
     );
 };
