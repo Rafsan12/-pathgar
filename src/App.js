@@ -15,6 +15,7 @@ import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
+import Chat from './Pages/Group-Learn/DashBoard/MessageBox/Chat';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
         <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
+        <Route  path="chat/:roomId" element={<Chat></Chat>}></Route>
         <Route path='/meeting' element={<Meeting></Meeting>}></Route>
         <Route path='/all-books' element={<AllBook></AllBook>}></Route>
         <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
