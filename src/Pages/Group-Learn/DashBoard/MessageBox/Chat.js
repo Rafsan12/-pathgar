@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Moment from 'react-moment';
-import { io } from "socket.io-client";
-import './Chat.Module.css';
+import { io } from "socket.io-client"; 
 import { MdSend } from 'react-icons/md';
 
 const Chat = () => {
