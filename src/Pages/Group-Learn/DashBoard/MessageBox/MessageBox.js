@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
-import './MessageBox.css'; 
+import './MessageBox.css';
 import { useNavigate } from 'react-router-dom';
 
-  
+
 const MessageBox = () => {
-   
+
 
     const navigate = useNavigate();
     const [error, setError] = useState("")
-    const [data, setData] = useState({ name:"", room:"" })
+    const [data, setData] = useState({ name: "", room: "" })
 
 
 
     const handleUserNameBlur = e => {
         setData({
-            ...data, 
+            ...data,
             [e.target.name]: e.target.value,
         })
     }
 
 
     const validation = () => {
-        if(!data.name){ 
+        if (!data.name) {
             setError("Please enter your name.")
             return false
         }
-        if(!data.room){ 
+        if (!data.room) {
             setError("Please select room.")
             return false
-        } 
+        }
         setError("")
         return true
     }
@@ -37,19 +37,19 @@ const MessageBox = () => {
     const handleFormSubmit = e => {
         e.preventDefault();
         const isValid = validation()
-        if(isValid){
+        if (isValid) {
             navigate(`/chat/${data.room}`, { state: data });
         }
     }
 
-    
-   
+
+
 
 
     return (
         <div class="join-container">
-            <header class="join-header text-white bg-primary">
-                <h1><i class="fas fa-smile"></i> ChatCord</h1>
+            <header class="join-header text-3xl text-white font-bold bg-primary">
+                <h1><i class="fas fa-smile"></i> Join Chat</h1>
             </header>
             <main class="join-main bg-purple-300">
                 <form onSubmit={handleFormSubmit}>
@@ -59,13 +59,13 @@ const MessageBox = () => {
                             type="text"
                             name="name"
                             id="name"
-                            placeholder="Enter username..." 
+                            placeholder="Enter username..."
                         />
                     </div>
 
                     <div class="form-control">
                         <label className='text-white' for="room">Room</label>
-                        <select className="form-select bg-light" name="room"   onBlur={handleUserNameBlur}>
+                        <select className="form-select bg-light" name="room" onBlur={handleUserNameBlur}>
                             <option value="">Select Room</option>
                             <option value="JavaScript">JavaScript</option>
                             <option value="Python">Python</option>
@@ -73,7 +73,7 @@ const MessageBox = () => {
                             <option value="C#">C#</option>
                             <option value="Ruby">Ruby</option>
                             <option value="Java">Java</option>
-                        </select> 
+                        </select>
                     </div>
                     <p className='text-xl text-red-500'>{error}</p>
                     <button type="submit" class="btn text-white">Join Chat</button>
