@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { AddItem, DecreaseOne, deleteItem } from '../Redux/Reducer/BookSlice';
 
 const CartBook = () => {
@@ -8,11 +9,19 @@ const CartBook = () => {
     const dispatch = useDispatch();
     const [price, setPrice] = useState(0);
     const carts = useSelector((state) => state.BookReducer.carts);
+    const Navigate = useNavigate();
 
 
     const AddToCart = (book) => {
         dispatch(AddItem(book));
 
+    }
+
+    const handlePayment=(price)=>{
+        // console.log(price)
+       if(price){
+        Navigate(`/payment`)
+       }
     }
 
     // remove one
@@ -82,13 +91,12 @@ const CartBook = () => {
                         <div className="card-body p-2">
                             <p>Total:</p>
                             <h2 className="text-3xl font-bold">{price}$</h2>
-                            <button className="btn btn-info  w-3/4 text-white ">Checkout</button>
+                            <button onClick={()=> handlePayment(price)} className="btn btn-info  w-3/4 text-white ">Checkout</button>
 
                         </div>
                     </div>
                 </div>
             </section >
-
         </div >
     );
 };
