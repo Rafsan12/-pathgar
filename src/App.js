@@ -16,6 +16,7 @@ import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
 import Chat from './Pages/Group-Learn/DashBoard/MessageBox/Chat';
+import RequireAuth from './Pages/Share/RequireAuth';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/courses" element={<Courses></Courses>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/courses" element={<RequireAuth><Courses></Courses></RequireAuth>}></Route>
         <Route path="/cart" element={<Cart></Cart>}></Route>
         <Route path='/book' element={<BookList></BookList>}></Route>
         <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
@@ -32,8 +34,8 @@ function App() {
         <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
         <Route  path="chat/:roomId" element={<Chat></Chat>}></Route>
         <Route path='/meeting' element={<Meeting></Meeting>}></Route>
-        <Route path='/all-books' element={<AllBook></AllBook>}></Route>
-        <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
+        <Route path='/all-books' element={<RequireAuth><AllBook></AllBook></RequireAuth>}></Route>
+        <Route path="/cart-book" element={<RequireAuth><CartBook></CartBook></RequireAuth>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

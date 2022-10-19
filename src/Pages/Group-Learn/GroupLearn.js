@@ -4,7 +4,7 @@ import './GroupLearn.css'
 
 const GroupLearn = () => {
     return (
-        <div className="heros" style={{ backgroundImage: `url("https://globaluniversity.edu/wp-content/uploads/2020/03/multiethnic-group-young-people-studying-together.jpg")` }}>
+        <div className="hero" style={{ backgroundImage: `url("https://globaluniversity.edu/wp-content/uploads/2020/03/multiethnic-group-young-people-studying-together.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
