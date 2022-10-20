@@ -16,7 +16,8 @@ import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
 import AllReiw from './Pages/reviews/AllReiw';
-import AddReview from './Pages/reviews/AddReview';
+
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/reviews" element={<AllReiw />}></Route>
-        <Route path="/addreview" element={<AddReview />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
       
