@@ -6,14 +6,17 @@ const Payment = ({price}) => {
   const navigate= useNavigate()
   // console.log(price)
 
-  const handlePaymentCart=(price)=>{
+  // const handlePaymentCart=(price)=>{
 
-    if(price){
-      navigate("/paymentcard")
-    }
+  //   if(price){
+  //     navigate("/paymentcard")
+  //   }
+  // }
+  const handlePaymentCart=()=>{
+    navigate("/paymentcard")
+
+   
   }
-
-
 
     return (
         <div>
