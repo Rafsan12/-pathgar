@@ -7,21 +7,21 @@ import Loading from '../../components/loading/Loading';
 import ReviewModal from './ReviewModal';
 
 const AllReiw = () => {
-    const [addreview, setAddReview] = useState('');
+    // const [addreview, setAddReview] = useState('');
     // Get Reviews
-    const { data: reviews, isLoading, error, refetch } = useQuery('reviews', () => fetch('http://localhost:5000/review', {
-        method: "GET",
-        headers: {
-            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-        }
-    }).then(res => res.json()));
-    console.log(reviews)
-    if (isLoading) {
-        return <Loading></Loading>
-    }
-    if (error) {
-        console.log(error);
-    }
+    // const { data: reviews, isLoading, error, refetch } = useQuery('reviews', () => fetch('http://localhost:5000/review', {
+    //     method: "GET",
+    //     headers: {
+    //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+    //     }
+    // }).then(res => res.json()));
+    // console.log(reviews)
+    // if (isLoading) {
+    //     return <Loading></Loading>
+    // }
+    // if (error) {
+    //     console.log(error);
+    // }
     
     // Post review
     const reviewHandle = e => {
@@ -100,8 +100,8 @@ const AllReiw = () => {
             <div>
                 <h1 className='text-3xl font-bold m-5'>Reviews</h1>
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-2 justify-items-center'>
-                    {
-                        reviews.map(review => {
+                    {/* {
+                        reviews.map(review => 
                             <div key={review._id} class="card w-64 bg-base-100 shadow-xl">
                             <div class="card-body">
                                 <h2 class="card-title">Name:{review.name}</h2>
@@ -110,9 +110,9 @@ const AllReiw = () => {
                                 <p>rating: {review.rating}</p>
                             </div>
                         </div>
-                        }
+                        
                         )
-                    }
+                    } */}
 
                 </div>
             </div>

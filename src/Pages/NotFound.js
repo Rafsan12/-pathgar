@@ -3,29 +3,16 @@ import { motion } from "framer-motion";
 import bookNotFond from "../img/book-not-found.jpg"
 const NotFound = () => {
     return (
-        <div>
-            <motion.div className="carousel">
-                <motion.div
-                    animate={{
-                        scale: [1, 1, 1, 1, 1],
-                        rotate: [0, 30, 60, 240, 360],
-                    }}
-                >
-                    {bookNotFond.map((image) => {
-                        return (
-                            <motion.div
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 2 }}
-                                className="item"
-                                transition={{ duration: 3 }}
-                                key={image}
-                            >
-                                <img src={image} alt="image" />
-                            </motion.div>
-                        );
-                    })}
-                </motion.div>
-            </motion.div>
+        <div className=" p-3">
+            <div className="hero min-h-screen " style={{ backgroundImage: `url(${bookNotFond})` }}>
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content text-center text-neutral-content">
+                <div className="max-w-md">
+                    <h1 className="mb-5 text-5xl font-bold">Not Found</h1>
+                   
+                </div>
+            </div>
+             </div>
         </div>
     );
 };
