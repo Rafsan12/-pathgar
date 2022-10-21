@@ -28,6 +28,7 @@ const DashBoard = () => {
                         </Link>
                         <Link to='/meeting' className="card cards p-10 lg:w-80 shadow-2xl"></Link>
                         <Link to='/meeting' className="card cardss p-10 w-80 shadow-xl">
+                        {/* <Link to='/join' className="card cards p-10 lg:w-80 shadow-2xl">
                             <div className=''>
                                 <div>
                                     <span className="text-7xl"><HiVideoCamera className='icons pl-10'></HiVideoCamera></span>
@@ -37,7 +38,7 @@ const DashBoard = () => {
                                     <span className='font-bold text-gray-500'>set up new meeting</span>
                                 </div>
                             </div> 
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

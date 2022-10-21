@@ -42,10 +42,11 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
-          
+
             <div>
                 <h1 className='text-5xl mt-20 mb-10 font-bold text-cyan-400 text-center'> Our Online Courses</h1>
             </div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10 my-5'>
                 {
                     courses.map(course =>
@@ -57,9 +58,9 @@ const Courses = () => {
                     )
                 }
             </div>
-           <div className="pb-8">
-           <GroupLearn></GroupLearn>
-           </div>
+            <div className="pb-8">
+                <GroupLearn></GroupLearn>
+            </div>
         </div>
     );
 };

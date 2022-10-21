@@ -25,7 +25,7 @@ const Register = () => {
         loadingCom = <button class="btn loading">loading</button>
     }
     if (user) {
-        navigate("/home");
+        navigate("/login");
     }
  
     return (
