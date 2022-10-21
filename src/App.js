@@ -15,6 +15,8 @@ import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
+import Payment from './Payment/Payment';
+import PaymentCard from './Payment/PaymentCard';
 import AllReiw from './Pages/reviews/AllReiw';
 
 import NotFound from './Pages/NotFound';
@@ -36,6 +38,8 @@ function App() {
         <Route path='/meeting' element={<Meeting></Meeting>}></Route>
         <Route path='/all-books' element={<AllBook></AllBook>}></Route>
         <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
+       <Route path='/payment' element={<Payment></Payment>}></Route>
+       <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
