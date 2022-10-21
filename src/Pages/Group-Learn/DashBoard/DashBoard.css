@@ -1,16 +1,19 @@
  
+.boards { 
+    background: rgb(156, 148, 138);
+}
 
-.cards {
+.cardss {
     background: #BBF7D0;
     transition: .3s linear;
 }
 
-.cards:hover {
+.cardss:hover {
     background: #92f4b4;
     transform: scale(1.1);    
 }
 
-.icon {
+.icons {
     /* display: inline-block; */
     background-color: #00000017; 
     border-radius: 10px;

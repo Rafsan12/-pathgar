@@ -2,7 +2,7 @@ import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import auth from '../../firebase-init';
+import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const Login = () => {
     const [
@@ -43,6 +43,7 @@ const Login = () => {
     // }
     return (
         <div>
+<<<<<<< HEAD
             <div className="card flex justify-center items-center min-h-screen w-lg bg-base-100 shadow-xl">
                 <div className="card flex-shrink-0 w-96 shadow-2xl bg-base-100">
                     {loadingCom}
@@ -55,6 +56,21 @@ const Login = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" placeholder="email" className="input input-bordered mb-3 w-full"
+=======
+          
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                   
+                    <div className="card flex-shrink-0 w-full max-w shadow-2xl bg-base-100">
+                        {loadingCom}
+                        <div className="card-body">
+                            <div className="form-control">
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input type="email" placeholder="email" className="input input-bordered mb-3"
+>>>>>>> 747e1825c7fbe35c016bd1f037cc3c67c98d338d
                                     {...register("email", { required: true })}
                                     aria-invalid={errors.email ? "true" : "false"} />
                                 {errors.email?.type === 'required' && <p className='text-red-500' role="alert"> Email is required</p>}
@@ -65,6 +81,7 @@ const Login = () => {
                                 <input type="password" placeholder="password" className="input input-bordered w-full"
                                     {...register("password", { required: true })}
                                     aria-invalid={errors.password ? "true" : "false"} />
+<<<<<<< HEAD
                                 {errors.password?.type === 'required' && <p className='text-red-500' role="alert">Password is required</p>}
                                 <div className="form-control mt-6">
                                     <button type='submit' className="btn btn-outline"><i className="fa-solid fa-arrow-right font-bold text-black-500 mr-3"></i>Login</button>
@@ -78,6 +95,25 @@ const Login = () => {
                             <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
                                 <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
                                 Login With Facebook</button>
+=======
+                                    {errors.password?.type === 'required' && <p className='text-red-500' role="alert">Password is required</p>}
+                                    <div className="form-control mt-6">
+                                        <button type='submit' className="btn btn-primary"><i className="fa-solid fa-arrow-right font-bold text-black-500 mr-3"></i>Login</button>
+                                    </div>
+                                    <p className='text-lg pt-2'> New User? <Link to='/register' className='text-green-600  text-lg pt-2'>Create Account </Link></p>
+                                </form>
+                                <div class="divider text-lg pt-2 ">OR</div>
+                                <button onClick={() => signInWithGoogle()}  class="btn btn-outline p-3">
+                                    <i className="fa-brands fa-google mr-2 font-bold text-sky-500"></i>
+                                    Login With Google</button>
+                                {/* <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
+                                    <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
+                                    Login With Facebook</button>      */}
+                            
+                            </div>
+                            {signError}
+                          
+>>>>>>> 747e1825c7fbe35c016bd1f037cc3c67c98d338d
                         </div>
                         {signError}
 

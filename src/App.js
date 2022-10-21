@@ -17,6 +17,12 @@ import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
 import Chat from './Pages/Group-Learn/DashBoard/MessageBox/Chat';
 import RequireAuth from './Pages/Share/RequireAuth';
+import Payment from './Payment/Payment';
+import PaymentCard from './Payment/PaymentCard';
+import AllReiw from './Pages/reviews/AllReiw';
+
+import NotFound from './Pages/NotFound';
+import About from './Pages/About';
 
 function App() {
   return (
@@ -36,9 +42,16 @@ function App() {
         <Route path='/meeting' element={<Meeting></Meeting>}></Route>
         <Route path='/all-books' element={<RequireAuth><AllBook></AllBook></RequireAuth>}></Route>
         <Route path="/cart-book" element={<RequireAuth><CartBook></CartBook></RequireAuth>}></Route>
+        <Route path='/all-books' element={<AllBook></AllBook>}></Route>
+        <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
+       <Route path='/payment' element={<Payment></Payment>}></Route>
+       <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/reviews" element={<AllReiw />}></Route>
+         <Route path="/about" element={<About />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
       

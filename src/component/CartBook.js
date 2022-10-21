@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, useNavigate } from 'react-router-dom';
+import PaymentCard from '../Payment/PaymentCard';
 import { AddItem, DecreaseOne, deleteItem } from '../Redux/Reducer/BookSlice';
 
 const CartBook = () => {
@@ -8,12 +10,23 @@ const CartBook = () => {
     const dispatch = useDispatch();
     const [price, setPrice] = useState(0);
     const carts = useSelector((state) => state.BookReducer.carts);
+    const Navigate = useNavigate();
 
 
     const AddToCart = (book) => {
         dispatch(AddItem(book));
 
     }
+ 
+
+    const handlePayment=(id)=>{
+        // console.log(price)
+       if(price){
+        Navigate(`/payment`)
+  
+       }
+    }
+    console.log()
 
     // remove one
     const Decrease = (item) => {
@@ -46,8 +59,6 @@ const CartBook = () => {
                 <div className='flex flex-col gap-5 lg:w-1/2' style={{ height: "380px", overflowY: "scroll" }}>
                     {
                         carts.map(cart => <div key={cart.bid}>
-
-
                             <div className="card lg:w-3/4 mx-auto w-full bg-pink-100 shadow-xl lg:h-44 h-full flex flex-col lg:flex-row items-center gap-4 p-2">
                                 <div className='lg:grow grow-0 w-full  flex justify-around items-center'>
                                     <figure className="px-2 pt-2">
@@ -82,13 +93,12 @@ const CartBook = () => {
                         <div className="card-body p-2">
                             <p>Total:</p>
                             <h2 className="text-3xl font-bold">{price}$</h2>
-                            <button className="btn btn-info  w-3/4 text-white ">Checkout</button>
+                            <button onClick={()=> handlePayment(price)} className="btn btn-info  w-3/4 text-white ">Checkout</button>
 
                         </div>
                     </div>
                 </div>
             </section >
-
         </div >
     );
 };

@@ -1,0 +1,14 @@
+.form-wrap{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 70px;
+}
+.form-wrap input, select{
+    padding: 8px 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 18px;
+}
+.form-wrap select{
+    padding: 8px 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 18px;
+}
