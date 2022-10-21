@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import ReviewModal from '../Pages/reviews/ReviewModal';
 import Books from './Books';
 import ShowBooks from './ShowBooks';
 
 const AllBook = () => {
     const [books, setBook] = useState(Books);
+    
     return (
         <div className='bg-green-100 py-3 mb-5'>
             <h1 className='font-bold text-center text-5xl p-2 my-5'>All Book</h1>
@@ -11,8 +13,9 @@ const AllBook = () => {
                 {
                     books.map(book =>
                         <div key={book.bid} className="card w-full shadow-xl bg-base-100 rounded">
-                            <ShowBooks
+                            <ShowBooks 
                                 book={book}
+                              
                             ></ShowBooks>
                         </div>
                     )

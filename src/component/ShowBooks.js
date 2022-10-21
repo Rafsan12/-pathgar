@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { AddItem } from '../Redux/Reducer/BookSlice';
 
-const ShowBooks = ({ book }) => {
+const ShowBooks = ({ book}) => {
+   
     //console.log(book);
     const dispatch = useDispatch();
 
@@ -24,6 +25,9 @@ const ShowBooks = ({ book }) => {
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
                     <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>
+                   
+                   
+               
                 </div>
             </div>
         </div>
