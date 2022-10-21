@@ -60,17 +60,10 @@ const Login = () => {
                         <div className="card-body">
                             <div className="form-control">
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    {/* <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label> */}
                                     <input type="email" placeholder="email" className="input input-bordered mb-3"
                                     {...register("email", { required: true })}
                                     aria-invalid={errors.email ? "true" : "false"} />
                                 {errors.email?.type === 'required' && <p className='text-red-500' role="alert"> Email is required</p>}
-
-                                {/* <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label> */}
                                 <input type="password" placeholder="password" className="input input-bordered w-full"
                                     {...register("password", { required: true })}
                                     aria-invalid={errors.password ? "true" : "false"} />
@@ -84,22 +77,8 @@ const Login = () => {
                             <button onClick={() => signInWithGoogle()} class="btn btn-outline p-3">
                                 <i className="fa-brands fa-google mr-2 font-bold text-sky-500"></i>
                                 Login With Google</button>
-                            {/* <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
-                                <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
-                                Login With Facebook</button> */}
-                                    {/* {errors.password?.type === 'required' && <p className='text-red-500' role="alert">Password is required</p>}
-                                    <div className="form-control mt-6">
-                                        <button type='submit' className="btn btn-primary"><i className="fa-solid fa-arrow-right font-bold text-black-500 mr-3"></i>Login</button> */}
                                     </div>
-                                    {/* <p className='text-lg pt-2'> New User? <Link to='/register' className='text-green-600  text-lg pt-2'>Create Account </Link></p> */}
                                 </div>
-                                {/* <div class="divider text-lg pt-2 ">OR</div>
-                                <button onClick={() => signInWithGoogle()}  class="btn btn-outline p-3">
-                                    <i className="fa-brands fa-google mr-2 font-bold text-sky-500"></i>
-                                    Login With Google</button> */}
-                                {/* <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
-                                    <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
-                                    Login With Facebook</button>      */}
                             
                             </div>
                             {signError}
