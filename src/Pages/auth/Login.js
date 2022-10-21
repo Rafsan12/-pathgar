@@ -2,7 +2,7 @@ import React from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import auth from '../../firebase-init';
+import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const Login = () => {
     const [
@@ -39,7 +39,7 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                    
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w shadow-2xl bg-base-100">
                         {loadingCom}
                         <div className="card-body">
                             <div className="form-control">
@@ -62,15 +62,15 @@ const Login = () => {
                                     <div className="form-control mt-6">
                                         <button type='submit' className="btn btn-primary"><i className="fa-solid fa-arrow-right font-bold text-black-500 mr-3"></i>Login</button>
                                     </div>
-                                    <p> New User? <Link to='/register' className='text-green-600'>Create Account </Link></p>
+                                    <p className='text-lg pt-2'> New User? <Link to='/register' className='text-green-600  text-lg pt-2'>Create Account </Link></p>
                                 </form>
-                                <div class="divider ">OR</div>
+                                <div class="divider text-lg pt-2 ">OR</div>
                                 <button onClick={() => signInWithGoogle()}  class="btn btn-outline p-3">
                                     <i className="fa-brands fa-google mr-2 font-bold text-sky-500"></i>
                                     Login With Google</button>
-                                <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
+                                {/* <button onClick={() => signInWithFacebook()} class="btn btn-outline p-3  mt-3">
                                     <i className="fa-brands fa-facebook font-bold text-sky-600 mr-2 "></i>
-                                    Login With Facebook</button>     
+                                    Login With Facebook</button>      */}
                             
                             </div>
                             {signError}

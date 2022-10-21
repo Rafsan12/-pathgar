@@ -6,7 +6,7 @@ const To_Drawing = () => {
     return (
         
        <div>
-             <h1 className='text-center text-4xl font-bold mt-8'> Drawing </h1>
+             <h1 className='text-center text-4xl font-bold mt-8 text-slate-600 italic'> Drawing </h1>
          <div className="hero min-h-screen">
             
             <div className="hero-content flex-col lg:flex-row-reverse">
