@@ -20,11 +20,8 @@
     "react-firebase-hooks": "^5.0.3",
     "react-hook-form": "^7.38.0",
     "react-icons": "^4.4.0",
-<<<<<<< HEAD
     "react-moment": "^1.1.2",
-=======
     "react-query": "^3.39.2",
->>>>>>> 747e1825c7fbe35c016bd1f037cc3c67c98d338d
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",

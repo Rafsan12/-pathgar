@@ -27,7 +27,7 @@ const DashBoard = () => {
                             </div> 
                         </Link>
                         <Link to='/meeting' className="card cards p-10 lg:w-80 shadow-2xl"></Link>
-                        <Link to='/meeting' className="card cardss p-10 w-80 shadow-xl">
+                        <Link to='/meeting' className="card cardss p-10 w-80 shadow-xl"> </Link>
                         {/* <Link to='/join' className="card cards p-10 lg:w-80 shadow-2xl">
                             <div className=''>
                                 <div>

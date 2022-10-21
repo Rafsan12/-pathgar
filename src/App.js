@@ -22,7 +22,7 @@ import AllReiw from './Pages/reviews/AllReiw';
 
 import NotFound from './Pages/NotFound';
 import About from './Pages/About';
-import RequireAuth from './Pages/Share/RequireAuth'; 
+// import RequireAuth from './Pages/Share/RequireAuth'; 
 
 function App() {
   return (
