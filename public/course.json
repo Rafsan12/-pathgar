@@ -1,43 +1,44 @@
 [
     {
-       "_id": 1,
-       "image": "app_developer",
+        "id": 1,
+        "image": "https://i.ibb.co/16R32Rc/1720.jpg",
         "price": 300,
         "name": "App Developer"
     },
     {
-       "_id": 2,
-       "image": "shopify",
+       
+        "id": 2,
+       "image": "https://i.ibb.co/nB1wf6G/Shopify-Theme-Developer.png",
        "price": 450,
        "name": "Shopify"
     },
     {
-        "_id": 3,
-       "image": "marketing ",
+        "id": 3,
+       "image": "https://i.ibb.co/Vj3Dw2S/Digital-marketing.png ",
         "price": 340,
         "name": "Digital Marketing"
     },
     {
-       "_id": 4,
-       "image": "english",
+        "id": 4,
+       "image": "https://i.ibb.co/PhFQcTT/english.png",
        "price": 350,
        "name": "English"
     },
     {
-       "_id": 5,
-       "image": "craft",
+        "id": 5,
+       "image": "https://i.ibb.co/BPpWS2Q/craft.png",
         "price": 300,
         "name": "Craft"
     },
     {
-        "_id": 6,
-        "image": "art",
+        "id": 6,
+        "image": "https://i.ibb.co/ts5yd9M/art.png",
         "price": 300,
         "name": "Art and Painting"
     },
     {
-        "_id": 7,
-        "image":"barista",
+        "id": 7,
+        "image":"https://i.ibb.co/wKtYcqt/Barista-Course-Poster.png",
         "price": 300,
        "name": "Barista"
     }

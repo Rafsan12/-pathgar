@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import svg from "./img/book-svg.svg";
+import emailjs from 'emailjs-com';
 const Footer = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_k829frp', 'template_tfc616c', form.current, 'pS5GrnkRJ-JCbPphU')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+      };
     return (
         <footer className="footer p-10 bg-neutral text-neutral-content ">
             <div>
@@ -23,16 +37,16 @@ const Footer = () => {
                 <Link className="link link-hover">Privacy policy</Link>
                 <Link className="link link-hover">Cookie policy</Link>
             </div>
-            <div>
+            <div >
                 <span className="footer-title">Newsletter</span>
-                <div className="form-control w-80">
+                <div className="form-control w-80" >
                     <label className="label">
-                        <span className="label-text text-white">Enter your email address</span>
+                        <span className="label-text text-white">PATHAGAR weekly book summary letter</span>
                     </label>
-                    <div className="relative">
+                    <form className="relative" ref={form} onSubmit={sendEmail}>
                         <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
-                        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
-                    </div>
+                        <input className="btn btn-primary absolute top-0 right-0 rounded-l-none" type="submit" value="Send" />
+                    </form>
                 </div>
             </div>
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
