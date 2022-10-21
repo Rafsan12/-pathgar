@@ -5,7 +5,7 @@ import art from "../../Course_image/Making art.gif"
 const To_Drawing = () => {
     return (
         
-       <div>
+       <div className='hidden lg:block'>
              <h1 className='text-center text-4xl font-bold mt-8 text-slate-600 italic'> Drawing </h1>
          <div className="hero min-h-screen">
             
