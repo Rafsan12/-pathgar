@@ -13,7 +13,7 @@ const Course = () => {
             <Link to="/courses"><button className="btn btn-primary mt-8 mx-48 ">See our courses </button></Link>
           </div>
         </div>
-      </div> 
+      </div>
 
     </div>
   );
