@@ -15,6 +15,10 @@ import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 import Login from './Pages/auth/Login';
 import Register from './Pages/auth/Register';
 import CartBook from './component/CartBook';
+import AllReiw from './Pages/reviews/AllReiw';
+
+import NotFound from './Pages/NotFound';
+import About from './Pages/About';
 
 function App() {
   return (
@@ -35,6 +39,9 @@ function App() {
         <Route path="/drawing" element={<Drawing></Drawing>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/reviews" element={<AllReiw />}></Route>
+         <Route path="/about" element={<About />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
       
