@@ -56,7 +56,7 @@ const CartBook = () => {
             <p className='text-3xl text-center font-bold my-10'>Your Book items: {carts.length}</p>
 
             <section className='flex flex-col lg:flex-row gap-5'>
-                <div className='flex flex-col gap-5 lg:w-1/2'>
+                <div className='flex flex-col gap-5 lg:w-1/2' style={{ height: "380px", overflowY: "scroll" }}>
                     {
                         carts.map(cart => <div key={cart.bid}>
                             <div className="card lg:w-3/4 mx-auto w-full bg-pink-100 shadow-xl lg:h-44 h-full flex flex-col lg:flex-row items-center gap-4 p-2">
