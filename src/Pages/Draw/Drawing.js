@@ -92,7 +92,7 @@ const Drawing = () => {
                     border: "1px solid #000",
                     background: "#ffffff", 
                 }}
-                width={1000}
+                width={700}
                 height={500}
                 ref={canvasRef}
                 onMouseDown={onMouseDown}
