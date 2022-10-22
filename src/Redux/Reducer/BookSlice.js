@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialCartState = {
-    carts: []
+    carts: [],
+    item: 0
 };
 
 export const BookSlice = createSlice({
@@ -9,7 +10,7 @@ export const BookSlice = createSlice({
     initialState: initialCartState,
     reducers: {
         AddItem: (state, action) => {
-            const ItemIndex = state.carts.findIndex((Item) => Item.bid === action.payload.bid);
+            const ItemIndex = state.carts.findIndex((Item) => Item._id === action.payload._id);
 
             if (ItemIndex >= 0) {
 
@@ -29,9 +30,16 @@ export const BookSlice = createSlice({
 
         },
 
+        AddCart: (state, action) => {
+            return {
+                ...state,
+                item: action.payload
+            }
+        },
+
         deleteItem: (state, action) => {
 
-            const data = state.carts.filter((el) => el.bid !== action.payload);
+            const data = state.carts.filter((el) => el._id !== action.payload);
 
             return {
                 ...state,
@@ -41,7 +49,7 @@ export const BookSlice = createSlice({
 
         DecreaseOne: (state, action) => {
 
-            const IteamIndex_dec = state.carts.findIndex((iteam) => iteam.bid === action.payload.bid);
+            const IteamIndex_dec = state.carts.findIndex((iteam) => iteam._id === action.payload._id);
 
             if (state.carts[IteamIndex_dec].quantity >= 1) {
                 const dltiteams = state.carts[IteamIndex_dec].quantity -= 1
@@ -52,7 +60,7 @@ export const BookSlice = createSlice({
                     carts: [...state.carts]
                 }
             } else if (state.carts[IteamIndex_dec].quantity === 1) {
-                const data = state.carts.filter((el) => el.bid !== action.payload);
+                const data = state.carts.filter((el) => el._id !== action.payload);
 
                 void {
                     ...state,
@@ -66,5 +74,5 @@ export const BookSlice = createSlice({
     }
 
 });
-export const { AddItem, deleteItem, DecreaseOne } =BookSlice.actions;
+export const { AddItem, deleteItem, DecreaseOne, AddCart } = BookSlice.actions;
 export default BookSlice.reducer;
