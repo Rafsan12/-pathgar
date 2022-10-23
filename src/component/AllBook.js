@@ -18,6 +18,7 @@ const AllBook = () => {
                         <div key={book._id} className="card w-full shadow-xl bg-base-100 rounded">
                             <ShowBooks
                                 book={book}
+
                             ></ShowBooks>
                         </div>
                     )

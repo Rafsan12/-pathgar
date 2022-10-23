@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddCart, AddItem, DecreaseOne, deleteItem } from '../Redux/Reducer/BookSlice';
 import { UserContext } from './../App';
+import { useNavigate } from 'react-router-dom';
 
 const CartBook = () => {
 
@@ -14,6 +15,8 @@ const CartBook = () => {
     const [dltToggle, setDltToggle] = useState(false);
     const [decreaseToggle, setDecreaseToggle] = useState(false);
     const [cartData, setCartData] = useContext(UserContext);
+    const [totalPrice, setTotalPrice] = useContext(UserContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('http://localhost:5000/carts')
@@ -113,7 +116,16 @@ const CartBook = () => {
         });
         setPrice(price);
 
-    }, [books])
+    }, [books]);
+
+    const handlePayment = (price) => {
+        // console.log(price)
+        if (price) {
+            setTotalPrice(price);
+            navigate(`/payment`)
+        }
+    }
+
 
     return (
         <div className='px-3 my-10'>
@@ -122,7 +134,7 @@ const CartBook = () => {
                 setCartData(books?.length)
             }
             <section className='flex flex-col lg:flex-row gap-5'>
-                <div className='flex flex-col gap-5 lg:w-1/2'>
+                <div className='flex flex-col gap-5 lg:w-1/2' style={{ height: "380px", overflowY: "scroll" }}>
                     {
                         books.map(cart => <div key={cart._id}>
 
@@ -160,13 +172,12 @@ const CartBook = () => {
                         <div className="card-body p-2">
                             <p>Total:</p>
                             <h2 className="text-3xl font-bold">{price}$</h2>
-                            <button className="btn btn-info  w-3/4 text-white ">Checkout</button>
+                            <button onClick={() => handlePayment(price)} className="btn btn-info  w-3/4 text-white ">Checkout</button>
 
                         </div>
                     </div>
                 </div>
             </section >
-
         </div >
     );
 };

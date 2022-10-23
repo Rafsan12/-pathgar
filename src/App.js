@@ -11,7 +11,7 @@ import Drawing from './Pages/Draw/Drawing';
 import GroupLearn from './Pages/Group-Learn/GroupLearn';
 import DashBoard from './Pages/Group-Learn/DashBoard/DashBoard';
 import MessageBox from './Pages/Group-Learn/DashBoard/MessageBox/MessageBox';
-import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
+// import Meeting from './Pages/Group-Learn/DashBoard/Meeting/Meeting';
 
 import CartBook from './component/CartBook';
 import React, { useState } from 'react';
@@ -23,14 +23,17 @@ import Userprofile from './component/Dashboard/Userprofile';
 import AllUsers from './component/Dashboard/AllUsers';
 import RequireAdmin from './component/Auth/RequireAdmin';
 import MyOrders from './component/Dashboard/MyOrders';
+import Payment from './Payment/Payment';
+import PaymentCard from './Payment/PaymentCard';
 
 export const UserContext = React.createContext([]);
 
 function App() {
 
   const [cartData, setCartData] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   return (
-    <UserContext.Provider value={[cartData, setCartData]}>
+    <UserContext.Provider value={[cartData, setCartData, totalPrice, setTotalPrice]}>
       <div>
         <Navbar></Navbar>
         <Routes>
@@ -41,7 +44,7 @@ function App() {
           <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
           <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
           <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
-          <Route path='/meeting' element={<Meeting></Meeting>}></Route>
+          {/* <Route path='/meeting' element={<Meeting></Meeting>}></Route> */}
           <Route path='/all-books' element={<AllBook></AllBook>}></Route>
           <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
           <Route path="/drawing" element={<Drawing></Drawing>}></Route>
@@ -55,6 +58,9 @@ function App() {
             <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
             <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
           </Route>
+
+          <Route path='/payment' element={<Payment></Payment>}></Route>
+          <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
 
         </Routes>
         <Footer></Footer>

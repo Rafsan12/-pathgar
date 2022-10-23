@@ -1,46 +1,84 @@
 import React, { useState } from 'react';
-import { io } from 'socket.io-client';
-import Chat from './Chat';
 import './MessageBox.css';
-
-
-const socket = io.connect("http://localhost:5000")
+import { useNavigate } from 'react-router-dom';
 
 
 const MessageBox = () => {
 
-    const [username, setUsername] = useState("");
-    const [room, setRoom] = useState("");
-    const [showChat, setShowChat] = useState(false);
 
-    const joinRoom = () => {
-        if (username !== "" && room !== "") {
-            socket.emit("join_room", room);
-            setShowChat(true);
+    const navigate = useNavigate();
+    const [error, setError] = useState("")
+    const [data, setData] = useState({ name: "", room: "" })
+
+
+
+    const handleUserNameBlur = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value,
+        })
+    }
+
+
+    const validation = () => {
+        if (!data.name) {
+            setError("Please enter your name.")
+            return false
         }
-    };
+        if (!data.room) {
+            setError("Please select room.")
+            return false
+        }
+        setError("")
+        return true
+    }
+
+
+    const handleFormSubmit = e => {
+        e.preventDefault();
+        const isValid = validation()
+        if (isValid) {
+            navigate(`/chat/${data.room}`, { state: data });
+        }
+    }
+
+
+
 
 
     return (
-        <div className='message-box'>
-            <div className="card w-lg bg-base-100 p-10 shadow-2xl">
-                {!showChat ? (
-                    <div className="joinChatContainer">
-                        <h3>Join A Chat</h3>
-                        <input type="text" placeholder="Type here" className="input w-full max-w-xs" onChange={(event) => {
-                            setUsername(event.target.value);
-                        }} />
-
-                        <input type="text" placeholder="Type here" className="input w-full max-w-xs" onChange={(event) => {
-                            setRoom(event.target.value);
-                        }} />
-                        <button onClick={joinRoom} className="btn  w-full ">Join A Room</button> 
+        <div class="join-container">
+            <header class="join-header text-3xl text-white font-bold bg-primary">
+                <h1><i class="fas fa-smile"></i> Join Chat</h1>
+            </header>
+            <main class="join-main bg-purple-300">
+                <form onSubmit={handleFormSubmit}>
+                    <div class="form-control">
+                        <label className='text-white' for="username">Username</label>
+                        <input onBlur={handleUserNameBlur}
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Enter username..."
+                        />
                     </div>
-                ) : (
-                    <Chat socket={socket} username={username} room={room} />
-                )}
-            </div>
 
+                    <div class="form-control">
+                        <label className='text-white' for="room">Room</label>
+                        <select className="form-select bg-light" name="room" onBlur={handleUserNameBlur}>
+                            <option value="">Select Room</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="PHP">PHP</option>
+                            <option value="C#">C#</option>
+                            <option value="Ruby">Ruby</option>
+                            <option value="Java">Java</option>
+                        </select>
+                    </div>
+                    <p className='text-xl text-red-500'>{error}</p>
+                    <button type="submit" class="btn text-white">Join Chat</button>
+                </form>
+            </main>
         </div>
     );
 };

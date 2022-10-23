@@ -61,6 +61,9 @@ const ShowBooks = ({ book }) => {
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
                     <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>
+
+
+
                 </div>
             </div>
 

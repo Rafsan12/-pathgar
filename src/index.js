@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from './Store';
+// import { QueryClient, QueryClientProvider } from 'react-query';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,9 @@ root.render(
   <BrowserRouter>
   <React.StrictMode>
     <Provider store={Store} >
+      {/* <QueryClientProvider client={QueryClient}>
+        <App />
+      </QueryClientProvider> */}
         <App />
     </Provider>
   </React.StrictMode>
