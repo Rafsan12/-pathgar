@@ -10,10 +10,10 @@ const Banner = () => {
         <div className='w-full'>
           <h1 className="lg:text-4xl text-2xl ">Welcome to <span className=' lg:text-6xl text-4xl font-bold italic underline decoration-zinc-200'>PATHAGAR</span></h1>
           <h1 className='lg:text-2xl text-lg font-bold'>
-            <span style={{ color: 'goldenrod', fontWeight: 'bold' }}>
+            <span style={{ color: 'violet', fontWeight: 'bold' }}>
 
               <Typewriter
-                words={['Upto 10% off in our courses. ', ' Upto 20% off our book product.']}
+                words={['Upto 10% off in our courses.', ' Upto 20% off our book product.']}
                 loop={true}
                 cursor
                 cursorStyle='|'
