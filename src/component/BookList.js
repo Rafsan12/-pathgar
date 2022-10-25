@@ -33,7 +33,7 @@ const BookList = () => {
 
 
     return (
-        <div>
+        <div className='my-12'>
             <div className='bg-orange-100 py-3 mb-5'>
                 <h1 className='font-bold text-center text-5xl p-2 my-5'>BookList</h1>
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 mx-10 my-5'>
