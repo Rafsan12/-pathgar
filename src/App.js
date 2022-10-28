@@ -34,7 +34,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   return (
     <UserContext.Provider value={[cartData, setCartData, totalPrice, setTotalPrice]}>
-      <div>
+      <div className=''>
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
