@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from './../../App';
@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   const navigate = useNavigate();
-  const getCourseData = useSelector((state) => state.CourseReducer.carts);
+  // const getCourseData = useSelector((state) => state.CourseReducer.carts);
   const courseNavigate = useNavigate();
 
   const [cartData, setCartData] = useContext(UserContext);
@@ -45,10 +45,10 @@ const Navbar = () => {
     navigate('/cart-book');
   };
 
-  const handleCartCourse = () => {
-    courseNavigate("/cart")
+  // const handleCartCourse = () => {
+  //   courseNavigate("/cart")
 
-  }
+  // }
 
   return (
     <div className="navbar bg-gray-500   sm:px-16 lg:px-24 py-4 text-white z-10 top sticky shrink-0 ">

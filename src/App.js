@@ -25,6 +25,7 @@ import RequireAdmin from './component/Auth/RequireAdmin';
 import MyOrders from './component/Dashboard/MyOrders';
 import Payment from './Payment/Payment';
 import PaymentCard from './Payment/PaymentCard';
+import About from './Pages/About/About';
 
 export const UserContext = React.createContext([]);
 
@@ -61,6 +62,7 @@ function App() {
 
           <Route path='/payment' element={<Payment></Payment>}></Route>
           <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
+          <Route path='about' element={<About></About>}></Route>
 
         </Routes>
         <Footer></Footer>
