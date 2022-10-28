@@ -42,7 +42,7 @@ function App() {
           <Route path="/cart" element={<Cart></Cart>}></Route>
           <Route path='/book' element={<BookList></BookList>}></Route>
           <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
-          <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+          <Route path='/dashboards' element={<DashBoard></DashBoard>}></Route>
           <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
           {/* <Route path='/meeting' element={<Meeting></Meeting>}></Route> */}
           <Route path='/all-books' element={<AllBook></AllBook>}></Route>
