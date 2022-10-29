@@ -5,6 +5,7 @@ const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState(" ");
+    const [success, setSuccess] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -22,9 +23,11 @@ const CheckoutForm = () => {
             card,
         })
         if (error) {
-            setCardError(error.message)
+            setCardError(error.message);
+            setSuccess('')
         } else {
-            setCardError()
+            setCardError();
+            setSuccess('Congrats! Your payment is completed.')
         }
     }
 
@@ -54,6 +57,9 @@ const CheckoutForm = () => {
             </form>
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
+            }
+            {
+                success && <p className='text-green-500'>{success}</p>
             }
         </>
     );

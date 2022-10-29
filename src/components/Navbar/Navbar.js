@@ -61,7 +61,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <p className='text-yellow-300 italic lg:text-5xl text-2xl'>PATHAGAR</p>
+        <p className='text-yellow-300 italic lg:text-5xl text-2xl ml-2'>PATHAGAR</p>
         {/* <img className='w-20' src={logo} alt="" /> */}
       </div>
       <div className="navbar-center hidden lg:flex  text-white">
