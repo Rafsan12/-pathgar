@@ -26,6 +26,7 @@ import MyOrders from './component/Dashboard/MyOrders';
 import Payment from './Payment/Payment';
 import PaymentCard from './Payment/PaymentCard';
 import About from './Pages/About/About';
+import AddBook from './component/Dashboard/AddBook';
 
 export const UserContext = React.createContext([]);
 
@@ -58,11 +59,12 @@ function App() {
             <Route index element={<Userprofile></Userprofile>}></Route>
             <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
             <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
+            <Route path='addbook' element={<RequireAdmin><AddBook></AddBook></RequireAdmin>}></Route>
           </Route>
 
           <Route path='/payment' element={<Payment></Payment>}></Route>
           <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
-          <Route path='about' element={<About></About>}></Route>
+
 
         </Routes>
         <Footer></Footer>

@@ -33,12 +33,12 @@ const Navbar = () => {
   const menuItems = <>
     <li><Link to="/">Home</Link></li>
     <li> <Link to='/all-books'>Books</Link> </li>
-    <li><Link to="/about">About</Link></li>
+
     {
       user && <li><Link to="/dashboard">Dashboard</Link></li>
     }
     {
-    <li>{user ? <span onClick={logout} >Sign Out</span> : <Link to="/login">Login</Link>}</li>}
+      <li>{user ? <span onClick={logout} >Sign Out</span> : <Link to="/login">Login</Link>}</li>}
   </>
 
   const handleCartBook = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <p className='text-yellow-300 italic text-5xl'>PATHAGR</p>
+        <p className='text-yellow-300 italic lg:text-5xl text-2xl'>PATHAGAR</p>
         {/* <img className='w-20' src={logo} alt="" /> */}
       </div>
       <div className="navbar-center hidden lg:flex  text-white">
