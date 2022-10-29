@@ -60,10 +60,7 @@ const ShowBooks = ({ book }) => {
                 <h2 className="card-title">{book.name}</h2>
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>
-
-
-
+                    <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>  
                 </div>
             </div>
 

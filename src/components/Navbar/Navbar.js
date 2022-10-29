@@ -97,7 +97,8 @@ const Navbar = () => {
       </div>
 
       {
-        user ? <div className="avatar online">
+        user ?
+         <div className="avatar online">
           <div className="w-10 rounded-full">
             <img src={user?.photoURL} />
           </div>

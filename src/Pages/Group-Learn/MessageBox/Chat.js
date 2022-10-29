@@ -6,6 +6,8 @@ import { MdSend } from 'react-icons/md';
 
 const Chat = () => {
 
+
+  const ENDPOINT = "https://pathagar-chat-server.onrender.com";
   const location = useLocation();
   const msgBoxRef = useRef();
 
@@ -16,7 +18,7 @@ const Chat = () => {
   const [socket, setSocket] = useState();
 
   useEffect(() => {
-    const socket = io("http://localhost:5000")
+    const socket = io(ENDPOINT)
     setSocket(socket)
 
     socket.on("connect", () => {
