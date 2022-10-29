@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.css";
@@ -132,6 +132,8 @@ const Signup = () => {
                     onChange={handleConfirmPasswordChange}
                     required
                 />
+
+                <p className="my-6">Already have an account? <Link className="hover:underline font-bold" to="/login">Please Login</Link> </p>
 
                 <button className="my-button">Sign up</button>
 
