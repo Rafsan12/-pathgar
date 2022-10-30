@@ -7,56 +7,64 @@ import Home from './Pages/Home/Home';
 import Footer from './Footer';
 import BookList from './component/BookList';
 import AllBook from './component/AllBook';
-import Drawing from './Pages/Draw/Drawing'; 
-import GroupLearn from './Pages/Group-Learn/GroupLearn';
-import DashBoard from './Pages/Group-Learn/DashBoard/DashBoard';
-import MessageBox from './Pages/Group-Learn/DashBoard/MessageBox/MessageBox'; 
-import Login from './Pages/auth/Login';
-import Register from './Pages/auth/Register';
+import Drawing from './Pages/Draw/Drawing';
+import GroupLearn from './Pages/Group-Learn/GroupLearn';  
 import CartBook from './component/CartBook';
-import Chat from './Pages/Group-Learn/DashBoard/MessageBox/Chat';
-import RequireAuth from './Pages/Share/RequireAuth';
+import React, { useState } from 'react';
+import Login from './component/Auth/Login';
+import Signup from './component/Auth/SignUp';
+import RequireAuth from './component/Auth/RequireAuth';
+import Dashboard from './component/Dashboard/Dashboard';
+import Userprofile from './component/Dashboard/Userprofile';
+import AllUsers from './component/Dashboard/AllUsers';
+import RequireAdmin from './component/Auth/RequireAdmin';
+import MyOrders from './component/Dashboard/MyOrders';
 import Payment from './Payment/Payment';
-import PaymentCard from './Payment/PaymentCard';
-import AllReiw from './Pages/reviews/AllReiw';
+import PaymentCard from './Payment/PaymentCard';  
+import MessageBox from './Pages/Group-Learn/MessageBox/MessageBox';
+import Chat from './Pages/Group-Learn/MessageBox/Chat';
 
-import NotFound from './Pages/NotFound';
-import About from './Pages/About';
-// import RequireAuth from './Pages/Share/RequireAuth'; 
+export const UserContext = React.createContext([]);
 
 function App() {
+
+  const [cartData, setCartData] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   return (
-    <div>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/courses" element={<RequireAuth><Courses></Courses></RequireAuth>}></Route>
-        <Route path="/cart" element={<Cart></Cart>}></Route>
-        <Route path='/book' element={<BookList></BookList>}></Route>
-        <Route path='/allbooks' element={<AllBook></AllBook>}></Route>
-        <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
-        <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
-        <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
-        <Route  path="chat/:roomId" element={<Chat></Chat>}></Route> 
-        <Route path='/all-books' element={<RequireAuth><AllBook></AllBook></RequireAuth>}></Route>
-        <Route path="/cart-book" element={<RequireAuth><CartBook></CartBook></RequireAuth>}></Route>
-        <Route path='/all-books' element={<AllBook></AllBook>}></Route>
-        <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
-       <Route path='/payment' element={<Payment></Payment>}></Route>
-       <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
-        <Route path="/drawing" element={<Drawing></Drawing>}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/reviews" element={<AllReiw />}></Route>
-         <Route path="/about" element={<About />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-      <Footer></Footer>
-      
-       
-     
-    </div>
+    <UserContext.Provider value={[cartData, setCartData, totalPrice, setTotalPrice]}>
+      <div>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="/courses" element={<Courses></Courses>}></Route>
+          <Route path="/cart" element={<Cart></Cart>}></Route>
+          <Route path='/book' element={<BookList></BookList>}></Route>
+          <Route path='/grouplearn' element={<RequireAuth><GroupLearn></GroupLearn></RequireAuth>}></Route> 
+          <Route  path="chat/:roomId" element={<Chat></Chat>}></Route> 
+          <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route> 
+          <Route path='/all-books' element={<AllBook></AllBook>}></Route>
+          <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
+          <Route path="/drawing" element={<Drawing></Drawing>}></Route>
+
+
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+
+          <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+            <Route index element={<Userprofile></Userprofile>}></Route>
+            <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+            <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
+          </Route>
+
+          <Route path='/payment' element={<Payment></Payment>}></Route>
+          <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
+
+        </Routes>
+        <Footer></Footer>
+
+      </div>
+    </UserContext.Provider>
   )
 }
 export default App;

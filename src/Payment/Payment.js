@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Payment.css'
 
-const Payment = ({price}) => {
-  const navigate= useNavigate()
+const Payment = ({ price }) => {
+  const navigate = useNavigate()
   // console.log(price)
 
   // const handlePaymentCart=(price)=>{
@@ -12,15 +12,14 @@ const Payment = ({price}) => {
   //     navigate("/paymentcard")
   //   }
   // }
-  const handlePaymentCart=()=>{
+  const handlePaymentCart = () => {
     navigate("/paymentcard")
 
-   
   }
 
-    return (
-        <div>
-        <div className="mt-10 sm:mt-0">
+  return (
+    <div>
+      <div className="mt-10 sm:mt-0">
         <div className="md:grid md:grid-cols-4 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0 center">
@@ -43,7 +42,7 @@ const Payment = ({price}) => {
                         id="first-name"
                         autoComplete="given-name"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-3">
@@ -56,7 +55,7 @@ const Payment = ({price}) => {
                         id="last-name"
                         autoComplete="family-name"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-4">
@@ -69,7 +68,7 @@ const Payment = ({price}) => {
                         id="email-address"
                         autoComplete="email"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                       required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-3">
@@ -81,7 +80,7 @@ const Payment = ({price}) => {
                         name="country"
                         autoComplete="country-name"
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                      required>
+                        required>
                         <option>Bangladesh</option>
                         <option>United States</option>
                         <option>Canada</option>
@@ -99,7 +98,7 @@ const Payment = ({price}) => {
                         id="street-address"
                         autoComplete="street-address"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-6 lg:col-span-2">
@@ -112,7 +111,7 @@ const Payment = ({price}) => {
                         id="city"
                         autoComplete="address-level2"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -125,7 +124,7 @@ const Payment = ({price}) => {
                         id="region"
                         autoComplete="address-level1"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
 
                     <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -138,16 +137,16 @@ const Payment = ({price}) => {
                         id="postal-code"
                         autoComplete="postal-code"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required/>
+                        required />
                     </div>
                   </div>
                 </div>
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
-                  onClick={handlePaymentCart}
+                    onClick={handlePaymentCart}
                     type="submit"
                     className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  required>
+                    required>
                     Save and continue
                   </button>
                 </div>
@@ -156,8 +155,8 @@ const Payment = ({price}) => {
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Payment;

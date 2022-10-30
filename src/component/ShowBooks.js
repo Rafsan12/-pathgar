@@ -1,15 +1,51 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AddItem } from '../Redux/Reducer/BookSlice';
+import { UserContext } from '../App';
+import { AddCart, AddItem } from '../Redux/Reducer/BookSlice';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './../firebase.init';
 
-const ShowBooks = ({ book}) => {
-   
-    //console.log(book);
-    const dispatch = useDispatch();
+const ShowBooks = ({ book }) => {
 
 
-    const AddToCart = (book) => {
-        dispatch(AddItem(book));
+    //const dispatch = useDispatch();
+    const [cartData, setCartData] = useContext(UserContext);
+    const [user] = useAuthState(auth);
+    // console.log(user.email);
+
+    const AddToCart = async (book) => {
+        //dispatch(AddItem(book));
+        const response = await fetch('http://localhost:5000/carts');
+        const carts = await response.json();
+        setCartData(carts.length + 1);
+        const check = carts.filter(oldBook => oldBook.name === book.name);
+
+        if (check.length <= 0) {
+            const data = {
+                name: book.name,
+                price: book.price,
+                quantity: 1,
+                image: book.image,
+                email: user.email
+
+            }
+
+            fetch("http://localhost:5000/cart", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                },
+
+                body: JSON.stringify(data),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    //console.log(data);
+                });
+
+            // carts.map(book => dispatch(AddCart(book)));
+        }
+
 
     }
 
@@ -24,12 +60,10 @@ const ShowBooks = ({ book}) => {
                 <h2 className="card-title">{book.name}</h2>
                 <p>Price: {book.price}$</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>
-                   
-                   
-               
+                    <button className="btn btn-primary" onClick={() => AddToCart(book)}>Order Now</button>  
                 </div>
             </div>
+
         </div>
 
     );

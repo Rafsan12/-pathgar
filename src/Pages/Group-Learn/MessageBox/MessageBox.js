@@ -67,12 +67,8 @@ const MessageBox = () => {
                         <label className='text-white' for="room">Room</label>
                         <select className="form-select bg-light" name="room" onBlur={handleUserNameBlur}>
                             <option value="">Select Room</option>
-                            <option value="JavaScript">JavaScript</option>
-                            <option value="Python">Python</option>
-                            <option value="PHP">PHP</option>
-                            <option value="C#">C#</option>
-                            <option value="Ruby">Ruby</option>
-                            <option value="Java">Java</option>
+                            <option value="Courses">Courses</option>
+                            <option value="Books">Books</option> 
                         </select>
                     </div>
                     <p className='text-xl text-red-500'>{error}</p>

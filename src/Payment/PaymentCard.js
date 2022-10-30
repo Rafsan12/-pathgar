@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./PaymentCard.css";
-import {loadStripe} from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import {
     CardElement,
     Elements,
     useStripe,
     useElements,
-  } from '@stripe/react-stripe-js';
+} from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
-  
+import { UserContext } from './../App';
+
 
 const stripePromise = loadStripe('pk_test_51LuvjID4so4eq6Yp8JZQAnoqQfHXMljMCHcqDzuvYhgV0oG7Jm5rOohqJGaQNbvbwJZchrq93J0ZiLH6UKpwXJJa00c5bXyePM');
 
 const PaymentCard = () => {
+    const [totalPrice] = useContext(UserContext);
+
     return (
         <div>
             <div class="bg-base-200 py-10  ">
@@ -20,7 +23,7 @@ const PaymentCard = () => {
                     <div class="card w-full max-w-md my-7  bg-base-100 shadow-xl">
                         <div class="card-body font-bold">
                             <h2 class="card-title font-bold"> Pay price of the book</h2>
-                            <p class="text-xl"> Please pay :  $00 </p>
+                            <p class="text-xl"> Please pay : {totalPrice}$ </p>
 
                         </div>
                     </div>
