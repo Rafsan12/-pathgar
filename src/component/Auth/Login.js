@@ -68,7 +68,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/home";
 
     const [token] = useToken(user || googleUser)
     useEffect(() => {
@@ -108,9 +108,9 @@ const Login = () => {
 
                 <ToastContainer />
                 <br />
-                <p>Don't have an account? <Link to="/signup">Sign up first</Link> </p>
+                <p>Don't have an account? <Link className="hover:underline font-bold" to="/signup"> Sign up</Link> </p>
 
-                <button className="btn btn-link" onClick={handlePasswordReset}>Forget password?</button>
+                <button className="btn btn-link no-underline" onClick={handlePasswordReset}>Forget password?</button>
 
             </form>
 

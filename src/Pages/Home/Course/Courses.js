@@ -57,10 +57,7 @@ const Courses = () => {
                         </div>
                     )
                 }
-            </div>
-            <div className="pb-8">
-                <GroupLearn></GroupLearn>
-            </div>
+            </div> 
         </div>
     );
 };
