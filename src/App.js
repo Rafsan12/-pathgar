@@ -36,11 +36,10 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/courses" element={<Courses></Courses>}></Route>
           <Route path="/cart" element={<Cart></Cart>}></Route>
           <Route path='/book' element={<BookList></BookList>}></Route>
-          <Route path='/grouplearn' element={<RequireAuth><GroupLearn></GroupLearn></RequireAuth>}></Route> 
+          <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route> 
           <Route  path="chat/:roomId" element={<Chat></Chat>}></Route> 
           <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route> 
           <Route path='/all-books' element={<AllBook></AllBook>}></Route>
