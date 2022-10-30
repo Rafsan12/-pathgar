@@ -14,8 +14,8 @@ const CartBook = () => {
     const [addToggle, setToggle] = useState(false);
     const [dltToggle, setDltToggle] = useState(false);
     const [decreaseToggle, setDecreaseToggle] = useState(false);
-    const [cartData, setCartData] = useContext(UserContext);
-    const [totalPrice, setTotalPrice] = useContext(UserContext);
+    //const [cartData, setCartData] = useContext(UserContext);
+    const [cartData, setCartData, totalPrice, setTotalPrice] = useContext(UserContext);
     const navigate = useNavigate();
 
     useEffect(() => {

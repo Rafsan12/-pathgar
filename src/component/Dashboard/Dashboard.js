@@ -22,6 +22,7 @@ const Dashboard = () => {
                         user && !admin.admin && <li><Link to={'/dashboard/myOrders'} className="text-secondary font-semibold">My Orders</Link></li>
                     }
                     {admin.admin && <li><Link to={'/dashboard/allusers'} className="text-secondary font-semibold">Make Admin</Link></li>}
+                    {admin.admin && <li><Link to={'/dashboard/addbook'} className="text-secondary font-semibold">Add Book</Link></li>}
                 </ul>
 
             </div>

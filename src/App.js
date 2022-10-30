@@ -23,6 +23,9 @@ import Payment from './Payment/Payment';
 import PaymentCard from './Payment/PaymentCard';  
 import MessageBox from './Pages/Group-Learn/MessageBox/MessageBox';
 import Chat from './Pages/Group-Learn/MessageBox/Chat';
+import PaymentCard from './Payment/PaymentCard';
+import About from './Pages/About/About';
+import AddBook from './component/Dashboard/AddBook';
 
 export const UserContext = React.createContext([]);
 
@@ -43,6 +46,10 @@ function App() {
           <Route path='/grouplearn' element={<RequireAuth><GroupLearn></GroupLearn></RequireAuth>}></Route> 
           <Route  path="chat/:roomId" element={<Chat></Chat>}></Route> 
           <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route> 
+          <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
+          <Route path='/dashboards' element={<DashBoard></DashBoard>}></Route>
+          <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
+          {/* <Route path='/meeting' element={<Meeting></Meeting>}></Route> */}
           <Route path='/all-books' element={<AllBook></AllBook>}></Route>
           <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
           <Route path="/drawing" element={<Drawing></Drawing>}></Route>
@@ -55,10 +62,12 @@ function App() {
             <Route index element={<Userprofile></Userprofile>}></Route>
             <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
             <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
+            <Route path='addbook' element={<RequireAdmin><AddBook></AddBook></RequireAdmin>}></Route>
           </Route>
 
           <Route path='/payment' element={<Payment></Payment>}></Route>
           <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
+
 
         </Routes>
         <Footer></Footer>

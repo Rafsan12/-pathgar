@@ -58,7 +58,7 @@ const MyOrders = () => {
                             <th></th>
                             <th>Product Name</th>
                             <th>Quantity</th>
-                            <th>Payment Status</th>
+
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -70,7 +70,7 @@ const MyOrders = () => {
                                 <td className="text-accent text-base">
                                     {order?.quantity}
                                 </td>
-                                <td><button className="btn btn-xs mx-1"> Make payment</button></td>
+
 
                                 <td>
 

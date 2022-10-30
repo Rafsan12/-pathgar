@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "../../Course_image/Fearless.gif"
 import { UserContext } from './../../App';
 import auth from './../../firebase.init';
 import { signOut } from 'firebase/auth';
@@ -27,38 +26,33 @@ const Navbar = () => {
   };
 
   const navigate = useNavigate();
-  const getCourseData = useSelector((state) => state.CourseReducer.carts);
+  // const getCourseData = useSelector((state) => state.CourseReducer.carts);
   const courseNavigate = useNavigate();
 
   const [cartData, setCartData] = useContext(UserContext);
 
   const menuItems = <>
     <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
     <li> <Link to='/all-books'>Books</Link> </li>
 
     {
-      user ?
-        <>
-          <li><Link to="/dashboard">Dashboard</Link></li>
-          <li><Link onClick={logout} to="/login">Log Out</Link></li>
-        </>
-        :
-        <li><Link to="/login">Log In</Link></li>
+      user && <li><Link to="/dashboard">Dashboard</Link></li>
     }
+    {
+      <li>{user ? <span onClick={logout} >Sign Out</span> : <Link to="/login">Login</Link>}</li>}
   </>
 
   const handleCartBook = () => {
     navigate('/cart-book');
   };
 
-  const handleCartCourse = () => {
-    courseNavigate("/cart")
+  // const handleCartCourse = () => {
+  //   courseNavigate("/cart")
 
-  }
+  // }
 
   return (
-    <div className="navbar bg-gradient-to-r from-violet-300 to-fuchsia-300   sm:px-16 lg:px-24 py-4 text-white z-10 ">
+    <div className="navbar bg-gray-500   sm:px-16 lg:px-24 py-4 text-white z-10 top sticky shrink-0 ">
       <div className="navbar-start ">
         <div className="dropdown ">
           <label tabIndex={0} className="btn btn-ghost lg:hidden ">
@@ -68,10 +62,11 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <img className='w-20' src={logo} alt="" />
+        <p className='text-yellow-300 italic lg:text-5xl text-2xl ml-2'>PATHAGAR</p>
+        {/* <img className='w-20' src={logo} alt="" /> */}
       </div>
       <div className="navbar-center hidden lg:flex  text-white">
-        <ul className="menu menu-horizontal p-0 text-2xl">
+        <ul className="menu menu-horizontal p-0 text-xl">
           {menuItems}
         </ul>
       </div>
