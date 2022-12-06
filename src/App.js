@@ -43,14 +43,10 @@ function App() {
           <Route path="/cart" element={<Cart></Cart>}></Route>
           <Route path='/book' element={<BookList></BookList>}></Route>
           <Route path='/grouplearn' element={<RequireAuth><GroupLearn></GroupLearn></RequireAuth>}></Route> 
-          <Route  path="chat/:roomId" element={<Chat></Chat>}></Route> 
-          <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route> 
-          <Route path='/grouplearn' element={<GroupLearn></GroupLearn>}></Route>
-          {/* <Route path='/dashboards' element={<DashBoard></DashBoard>}></Route> */}
-          <Route path='/messagebox' element={<MessageBox></MessageBox>}></Route>
-          {/* <Route path='/meeting' element={<Meeting></Meeting>}></Route> */}
-          <Route path='/all-books' element={<AllBook></AllBook>}></Route>
-          <Route path="/cart-book" element={<CartBook></CartBook>}></Route>
+          <Route  path="chat/:roomId" element={<RequireAuth><Chat></Chat></RequireAuth>}></Route> 
+          <Route path='/messagebox' element={<RequireAuth><MessageBox></MessageBox></RequireAuth>}></Route> 
+          <Route path='/all-books' element={<RequireAuth><AllBook></AllBook></RequireAuth>}></Route>
+          <Route path="/cart-book" element={<RequireAuth><CartBook></CartBook></RequireAuth>}></Route>
           <Route path="/drawing" element={<Drawing></Drawing>}></Route>
 
 
@@ -64,8 +60,8 @@ function App() {
             <Route path='addbook' element={<RequireAdmin><AddBook></AddBook></RequireAdmin>}></Route>
           </Route>
 
-          <Route path='/payment' element={<Payment></Payment>}></Route>
-          <Route path='paymentcard' element={<PaymentCard></PaymentCard>}></Route>
+          <Route path='/payment' element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
+          <Route path='paymentcard' element={<RequireAuth><PaymentCard></PaymentCard></RequireAuth>}></Route>
 
 
         </Routes>

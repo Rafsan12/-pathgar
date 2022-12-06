@@ -80,7 +80,7 @@ const Chat = () => {
                 </div>
                 :
                 <div className="flex pl-5 ">
-                  <div className=" mt-1 shadow p-4 bg-gray-200 border rounded-3xl w-auto">
+                  <div className="mt-1 shadow p-4 bg-gray-200 border rounded-3xl w-auto">
                     <div>
                       <strong className="text-xl">{msg.name}</strong>
                       <sup className="ml-1"><Moment fromNow>{msg.time}</Moment></sup>

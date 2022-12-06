@@ -2,16 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Payment.css'
 
-const Payment = ({ price }) => {
+const Payment = () => {
   const navigate = useNavigate()
-  // console.log(price)
 
-  // const handlePaymentCart=(price)=>{
-
-  //   if(price){
-  //     navigate("/paymentcard")
-  //   }
-  // }
   const handlePaymentCart = () => {
     navigate("/paymentcard")
 
@@ -27,7 +20,7 @@ const Payment = ({ price }) => {
               <p className="mt-1 text-sm text-gray-600">Use a permanent address where you can receive mail.</p> */}
             </div>
           </div>
-          <div className="mt-5 md:col-span-2 md:mt-0 form-wrap my-24 mtj-24">
+          <div className="mt-5 md:col-span-2 md:mt-0 form-wrap my-24">
             <form action="#" method="">
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 my-5 sm:p-6">
@@ -145,8 +138,7 @@ const Payment = ({ price }) => {
                   <button
                     onClick={handlePaymentCart}
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    required>
+                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     Save and continue
                   </button>
                 </div>

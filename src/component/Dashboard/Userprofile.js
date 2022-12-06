@@ -70,19 +70,19 @@ const UserProfile = () => {
 
 
     return (
-        <div className="mx-auto w-3/4 flex justify-around mt-2">
+        <div className="mx-auto w-3/4 flex justify-around mt-16">
             <div>
                 <h1 className="text-black text-3xl">
                     Hello <b>{user.displayName ? user.displayName : "empty name"}</b>
                 </h1>
-                <h1 className="text-black text-xl">
+                <h1 className="text-black text-xl mt-2 mb-6">
                     <b>Email : </b>
                     {user.email}
                 </h1>
                 <div>
                     <p
                         onClick={() => setEditAble(true)}
-                        className="text-black text-l font-bold border-2 border-accent rounded-lg px-3 py-1 my-2 cursor-pointer w-1/2"
+                        className="btn btn-ghost text-black text-l font-bold border-2 border-accent rounded-lg px-3 py-1 my-2 cursor-pointer w-1/2"
                     >
                         Edit profile{" "}
                         <button className="">
@@ -91,7 +91,7 @@ const UserProfile = () => {
                     </p>
                 </div>
                 <div className="my-5">
-                    <b className="text-black mt-10">User details:</b>
+                    <b className="text-black text-2xl mt-10">User details:</b>
                     {editAble ? (
                         <form onSubmit={handleSubmit(handleUpdate)}>
                             <div className="form-control">
@@ -140,23 +140,15 @@ const UserProfile = () => {
                             </div>
                         </form>
                     ) : (
-                        <div className="mt-5 ml-5">
-                            <h1 className="text-black text-base">
-                                <b>Education : </b>
-                                {userProfile?.education}
-                            </h1>
-                            <h1 className="text-black text-base">
-                                <b>Phone no : </b>
-                                {userProfile?.phoneNumber}
-                            </h1>
-                            <h1 className="text-black text-base">
-                                <b>Social link : </b>
-                                {userProfile?.social}
-                            </h1>
-                            <h1 className="text-black text-base">
-                                <b>Address : </b>
-                                {userProfile?.address}
-                            </h1>
+                        <div className="mt-5 ml-5"> 
+                            <label className='block font-bold'>Education</label>
+                            <input value={userProfile?.education} className="input disable w-full max-w-xs mb-4" />
+                            <label className='block font-bold'>Phone Number</label>
+                            <input value={userProfile?.phoneNumber} className="input w-full max-w-xs mb-4" />
+                            <label className='block font-bold'>Address</label>
+                            <input value={userProfile?.address} className="input w-full max-w-xs mb-4" />
+                            <label className='block font-bold'>Social Media Link</label>
+                            <input value={userProfile?.social} className="input w-full max-w-xs mb-4" />
                         </div>
                     )}
                 </div>

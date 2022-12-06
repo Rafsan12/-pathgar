@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import CheckoutForm from "../../Payment/CheckoutForm";
 import auth from './../../firebase.init';
 
 
@@ -18,7 +19,7 @@ const MyOrders = () => {
     } = useQuery(["usersOrders"], () => fetch(userUrl).then((res) => res.json()));
 
     const handleDltOrder = (id) => {
-        const url = ` http://localhost:5000/booking/dlt/${id}`;
+        const url = `http://localhost:5000/booking/dlt/${id}`;
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this product!",
@@ -44,7 +45,10 @@ const MyOrders = () => {
         });
     };
 
-
+    const navigate = useNavigate()
+    const checkout = () => {
+        navigate(`/payment`)
+    }
     return (
         <div>
             <h1 className="text-accent text-lg font-bold text-center my-5">
@@ -52,13 +56,13 @@ const MyOrders = () => {
                 Total number of order : {orders?.length}
             </h1>
             <div className="overflow-x-auto">
-                <table className="table w-3/4 flex justify-center items-center mx-auto">
+                <table className="table w-3/4 sm:w-4/4 flex justify-center items-center mx-auto">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
-                            <th>Quantity</th>
-
+                            <th>Quantity</th> 
+                            <th>Price</th> 
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -67,19 +71,15 @@ const MyOrders = () => {
                             return <tr key={order._id}>
                                 <th className="text-accent text-base">{index + 1}</th>
                                 <td className="text-accent text-base">{order?.name}</td>
-                                <td className="text-accent text-base">
-                                    {order?.quantity}
-                                </td>
+                                <td className="text-accent text-base">{order?.quantity}</td>
+                                <td className="text-accent text-base">{order?.price}</td>
 
 
-                                <td>
-
-                                    <button
-                                        className="btn btn-xs mx-1"
-                                        onClick={() => handleDltOrder(order._id)}
-                                    >
-                                        Delete
+                                <td> 
+                                    <button onClick={() => handleDltOrder(order._id)} className="btn btn-square bg-red-500">
+                                        x
                                     </button>
+                                    
 
                                 </td>
                             </tr>;

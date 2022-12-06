@@ -14,7 +14,7 @@ import { UserContext } from './../App';
 const stripePromise = loadStripe('pk_test_51LuvjID4so4eq6Yp8JZQAnoqQfHXMljMCHcqDzuvYhgV0oG7Jm5rOohqJGaQNbvbwJZchrq93J0ZiLH6UKpwXJJa00c5bXyePM');
 
 const PaymentCard = () => {
-    const [, , totalPrice] = useContext(UserContext);
+    const [totalPrice] = useContext(UserContext);
 
     return (
         <div>

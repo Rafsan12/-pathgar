@@ -151,6 +151,9 @@ a {
 }
 
 @media (max-width: 700px) {
+	.join-container{
+		width: 320px;
+	}
 	.chat-main {
 		display: block;
 	}

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Books from './Books';
+import React, { useEffect, useState } from 'react'; 
 import ShowBooks from './ShowBooks';
 import bookCover from '../book images/book-image-cover.jpg';
 
@@ -21,8 +20,7 @@ const AllBook = () => {
                     books.map(book =>
                         <div key={book._id} className="card w-full shadow-xl bg-base-100 rounded">
                             <ShowBooks
-                                book={book}
-
+                                book={book} 
                             ></ShowBooks>
                         </div>
                     )

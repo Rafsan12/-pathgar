@@ -2,3 +2,11 @@
     width: 500px;
     margin: 0 auto;
 }
+
+@media all and (max-width: 768px) {
+    .card-wraper{
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+}

@@ -98,7 +98,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <div className="login-title">LOGIN</div>
+            <div className="login-title ">LOGIN</div>
             <form className="login-form" onSubmit={handleLogin}>
                 <input type="text" placeholder="Your Email" onChange={handleEmailChange} required />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
