@@ -105,15 +105,6 @@ const UserProfile = () => {
                                     {...register("education")}
                                 />
                                 <label className="label text-black font-semibold">
-                                    Your Socialmedia link
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Socialmedia link"
-                                    className="py-2 border border-accent rounded-lg w-full px-3 text-black"
-                                    {...register("social")}
-                                />
-                                <label className="label text-black font-semibold">
                                     Your phone number
                                 </label>
                                 <input
@@ -130,6 +121,15 @@ const UserProfile = () => {
                                     placeholder="Address"
                                     className="py-2 border border-accent rounded-lg w-full px-3 text-black"
                                     {...register("address")}
+                                />
+                                <label className="label text-black font-semibold">
+                                    Your Socialmedia link
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder="Socialmedia link"
+                                    className="py-2 border border-accent rounded-lg w-full px-3 text-black"
+                                    {...register("social")}
                                 />
                                 <input
                                     type="submit"
