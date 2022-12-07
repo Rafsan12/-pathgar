@@ -5,7 +5,7 @@ import bookCover from '../book images/book-image-cover.jpg';
 const AllBook = () => {
     const [books, setBook] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://pathagar.onrender.com/books')
             .then(res => res.json())
             .then(data => setBook(data))
     }, [])

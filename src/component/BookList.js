@@ -25,7 +25,7 @@ const BookList = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://pathagar.onrender.com/books')
             .then(res => res.json())
             .then(data => setBook(data))
     }, [])

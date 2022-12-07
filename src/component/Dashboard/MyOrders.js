@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 const MyOrders = () => {
 
     const [user] = useAuthState(auth);
-    const userUrl = `http://localhost:5000/booking/email/${user.email}`;
+    const userUrl = `https://pathagar.onrender.com/booking/email/${user.email}`;
     const {
         data: orders,
         isLoading,
@@ -19,7 +19,7 @@ const MyOrders = () => {
     } = useQuery(["usersOrders"], () => fetch(userUrl).then((res) => res.json()));
 
     const handleDltOrder = (id) => {
-        const url = `http://localhost:5000/booking/dlt/${id}`;
+        const url = `https://pathagar.onrender.com/booking/dlt/${id}`;
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this product!",

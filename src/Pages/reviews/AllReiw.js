@@ -9,7 +9,7 @@ import ReviewModal from './ReviewModal';
 const AllReiw = () => {
     // const [addreview, setAddReview] = useState('');
     // Get Reviews
-    // const { data: reviews, isLoading, error, refetch } = useQuery('reviews', () => fetch('http://localhost:5000/review', {
+    // const { data: reviews, isLoading, error, refetch } = useQuery('reviews', () => fetch('https://pathagar.onrender.com/review', {
     //     method: "GET",
     //     headers: {
     //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -33,7 +33,7 @@ const AllReiw = () => {
         const comment = e.target.comment.value
         console.log(name, email, rating, comment);
         // const reviewData = { name, email, rating, comment }
-        // fetch('http://localhost:5000/review', {
+        // fetch('https://pathagar.onrender.com/review', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'

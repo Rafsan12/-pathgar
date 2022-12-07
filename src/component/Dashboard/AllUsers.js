@@ -11,7 +11,7 @@ const AllUsers = () => {
 
 
 
-    const userUrl = ` http://localhost:5000/allusers`;
+    const userUrl = ` https://pathagar.onrender.com/allusers`;
     const {
         data: users,
         isLoading,
@@ -23,7 +23,7 @@ const AllUsers = () => {
     }
 
     const handleDlt = async (email) => {
-        const url1 = ` http://localhost:5000/allusers/dlt/${email}`;
+        const url1 = ` https://pathagar.onrender.com/allusers/dlt/${email}`;
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this user!",
@@ -51,7 +51,7 @@ const AllUsers = () => {
 
     const handleAdmin = async (user) => {
         const email = user.email;
-        const url1 = ` http://localhost:5000/allusers/makeadmin/${email}`;
+        const url1 = ` https://pathagar.onrender.com/allusers/makeadmin/${email}`;
         Swal.fire({
             title: "Are you sure?",
             text: `${user?.name ? user.name : ''} promot to admin`,

@@ -17,7 +17,7 @@ const CartBook = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/carts')
+        fetch('https://pathagar.onrender.com/carts')
             .then(res => res.json())
             .then(data => setBook(data));
 
@@ -39,13 +39,13 @@ const CartBook = () => {
     const AddToCart = (id, quantity, price) => {
         //dispatch(AddItem(book));
 
-        // const response = await fetch(`http://localhost:5000/carts/${id}`);
+        // const response = await fetch(`https://pathagar.onrender.com/carts/${id}`);
         // const book = await response.json();
 
         const newQuantity = quantity + 1;
         const updateQuantity = { quantity: newQuantity } 
 
-        const url2 = `http://localhost:5000/carts/quantity/${id}`;
+        const url2 = `https://pathagar.onrender.com/carts/quantity/${id}`;
         fetch(url2, {
             method: 'PUT',
             headers: {
@@ -64,7 +64,7 @@ const CartBook = () => {
         const newQuantity = quantity - 1; 
         const updateQuantity = { quantity: newQuantity } 
 
-        const url2 = `http://localhost:5000/carts/quantity/${id}`;
+        const url2 = `https://pathagar.onrender.com/carts/quantity/${id}`;
         fetch(url2, {
             method: 'PUT',
             headers: {
@@ -82,7 +82,7 @@ const CartBook = () => {
     const dlt = async (id) => {
         //dispatch(deleteItem(id))
         //setDltToggle(!dltToggle);
-        await fetch(`http://localhost:5000/carts/delete/${id}`, {
+        await fetch(`https://pathagar.onrender.com/carts/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

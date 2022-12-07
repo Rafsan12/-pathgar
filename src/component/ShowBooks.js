@@ -15,7 +15,7 @@ const ShowBooks = ({ book }) => {
 
     const AddToCart = async (book) => {
         //dispatch(AddItem(book));
-        const response = await fetch('http://localhost:5000/carts');
+        const response = await fetch('https://pathagar.onrender.com/carts');
         const carts = await response.json();
         setCartData(carts.length + 1);
         const check = carts.filter(oldBook => oldBook.name === book.name);
@@ -30,7 +30,7 @@ const ShowBooks = ({ book }) => {
 
             }
 
-            fetch("http://localhost:5000/cart", {
+            fetch("https://pathagar.onrender.com/cart", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

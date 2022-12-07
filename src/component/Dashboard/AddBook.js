@@ -31,7 +31,7 @@ const AddBook = () => {
                         image: img,
                         category: data.category
                     };
-                    fetch("http://localhost:5000/book", {
+                    fetch("https://pathagar.onrender.com/book", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json",
